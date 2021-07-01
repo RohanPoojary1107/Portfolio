@@ -4,11 +4,11 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { StaticImage } from 'gatsby-plugin-image'
-import { logo } from './Navbar.module.css'
+import { logo, nav } from './Navbar.module.css'
 
 const NavBar = () => {
   return (
-    <Navbar collapseOnSelect expand="sm" variant="light">
+    <Navbar collapseOnSelect expand="sm" variant="light" className={`navbar ${nav}`}>
       <Container>
         <Navbar.Brand
           className="font-weight-medium gradient-text"
@@ -25,10 +25,10 @@ const NavBar = () => {
         <Navbar.Toggle />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link as={Link} to="/" style={{ color: "black" }}>
+            <Nav.Link as={Link} to="#about" style={{ color: "black" }}>
               About
             </Nav.Link>
-            <Nav.Link as={Link} to="/about" style={{ color: "black" }}>
+            <Nav.Link as={Link} to="#experience" style={{ color: "black" }}>
               Experience
             </Nav.Link>
             <Nav.Link as={Link} to="/fun" style={{ color: "black" }}>

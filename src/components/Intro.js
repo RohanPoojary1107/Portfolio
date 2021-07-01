@@ -5,13 +5,14 @@ import "./Typist.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { introTitle, shortIntro, row } from "./Intro.module.css";
 
 const Intro = () => {
   return (
-     <Row>
+     <Row className={`row ${row}`}>
         <Col className="align-self-center" xs={{span: 12, order: "last"}} md={{order: "first"}}>
-            <Typist avgTypingDelay={120}>Hey, I'm Rohan.</Typist>
-            <div className="short-intro">
+            <Typist avgTypingDelay={120} className={introTitle}>Hey, I'm Rohan.</Typist>
+            <div className={shortIntro}>
             I'm passionate about making the web more accessbile and I enjoy
             pushing myself outside the comfort zone.
             </div>

@@ -2,17 +2,17 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { StaticImage } from "gatsby-plugin-image";
-import { companyImg } from "./Experience.module.css"
+import { companyImg, row, companyName, jobTitle } from "./Experience.module.css"
 import Header from "./SectionHeader";
 
 const Experience = () => {
   return (
-    <div className="experience">
+    <Row id="experience">
       <Header sectionName={`<experience />`} />
-      <Row>
-        <Col xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
-          <div>Wattpad</div>
-          <div>Associate Engineer</div>
+      <Row className={`row ${row}`}>
+        <Col className="align-self-center" xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
+          <div className={companyName}>Wattpad</div>
+          <div className={jobTitle}>Associate Engineer | May 2021 - Present</div>
           <ul>
             <li>
               Develop responsive websites for clients using HTML, CSS, PHP and
@@ -28,14 +28,14 @@ const Experience = () => {
             </li>
           </ul>
         </Col>
-        <Col xs={{ span: 12, order: "first" }} md={{ order: "last" }}>
+        <Col className="align-self-center" xs={{ span: 12, order: "first" }} md={{ order: "last" }}>
           <StaticImage alt="Icube utm" src="../images/wattpad.png" imgClassName={companyImg}/>
         </Col>
       </Row>
-      <Row>
-        <Col xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
-          <div>ICUBE UTM</div>
-          <div>Software Developer</div>
+      <Row className={`row ${row}`}>
+        <Col className="align-self-center" xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
+          <div className={companyName}>ICUBE UTM</div>
+          <div className={jobTitle}>Software Developer | Sept 2020 - Feb 2021</div>
           <ul>
             <li>
               Develop responsive websites for clients using HTML, CSS, PHP and
@@ -51,14 +51,14 @@ const Experience = () => {
             </li>
           </ul>
         </Col>
-        <Col xs={{ span: 12, order: "first" }} md={{ order: "last" }}>
+        <Col className="align-self-center" xs={{ span: 12, order: "first" }} md={{ order: "last" }}>
           <StaticImage alt="Icube utm" src="../images/icube.png" imgClassName={companyImg}/>
         </Col>
       </Row>
-      <Row>
-        <Col xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
-          <div>Royal Bank of Canada (RBC)</div>
-          <div>Quality Engineer Intern</div>
+      <Row className={`row ${row}`}>
+        <Col className="align-self-center" xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
+          <div className={companyName}>Royal Bank of Canada (RBC)</div>
+          <div className={jobTitle}>Quality Engineer Intern | May 2020 - Aug 2020</div>
           <ul>
             <li>
               Worked on the Client Cards team to automate UI Testing, authoring
@@ -67,10 +67,6 @@ const Experience = () => {
             <li>
               Developed automation scripts in Python with Selenium, increasing
               automated test coverage by 48%.
-            </li>
-            <li>
-              Automated Mainframe application testing by implementing automated
-              scripts using Java, LeanFT and Cucumber.
             </li>
             <li>
               Developed understandable, reliable and maintainable test suites in
@@ -84,7 +80,7 @@ const Experience = () => {
           <StaticImage alt="Icube utm" src="../images/rbc.png" imgClassName={companyImg}/>
         </Col>
       </Row>
-    </div>
+    </Row>
   );
 };
 

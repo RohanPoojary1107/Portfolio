@@ -1,2 +1,11 @@
+.introTitle {
+    font-size: 50px;
+    font-weight: bold;
+}
+.shortIntro {
+    font-size: 24px;
+}
 
-
+.row {
+    padding: 60px 0px;
+}
