@@ -15,9 +15,21 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/inter": "^4.4.5",
+    "atomize": "^1.0.28",
+    "bootstrap": "^4.6.0",
     "gatsby": "^3.6.2",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
+    "gatsby-plugin-image": "^1.8.0",
+    "gatsby-plugin-sharp": "^3.8.0",
+    "gatsby-plugin-styletron": "^6.8.0",
+    "gatsby-source-filesystem": "^3.8.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "^17.0.1",
+    "react-transition-group": "^4.4.2",
+    "react-typist": "^2.0.5",
+    "styletron-engine-atomic": "^1.4.8",
+    "styletron-react": "^6.0.1"
   }
 }

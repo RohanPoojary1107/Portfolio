@@ -1,0 +1,14 @@
+.app {
+    font-family: "inter";
+}
+
+.section-header {
+    display: flex;
+    padding-bottom: 42px;
+    width: 100vw;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 46px;
+}
