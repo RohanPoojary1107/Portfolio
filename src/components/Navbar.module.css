@@ -6,3 +6,12 @@
 .nav {
     padding: 16px 0px !important;
 }
+
+.changeMode {
+    border: none;
+    background: none;
+}
+
+.modeIcon {
+    width: 30px
+}

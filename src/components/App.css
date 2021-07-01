@@ -2,6 +2,10 @@
     font-family: "inter";
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .section-header {
     display: flex;
     padding-bottom: 42px;

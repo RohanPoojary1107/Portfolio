@@ -1,0 +1,22 @@
+.socialIcons {
+    padding-right: 16px;
+}
+
+.reactIcon {
+    margin-bottom: 5px;
+    width: 30px
+}
+
+.madeBy {
+    padding-right: 5px
+}
+
+.row {
+    padding-bottom: 16px;
+}
+
+.credits {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

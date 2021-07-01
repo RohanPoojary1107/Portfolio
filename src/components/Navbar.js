@@ -3,15 +3,19 @@ import { Link } from "gatsby";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { StaticImage } from 'gatsby-plugin-image'
-import { logo, nav } from './Navbar.module.css'
+import { StaticImage } from "gatsby-plugin-image";
+import { logo, nav, changeMode, modeIcon } from "./Navbar.module.css";
 
 const NavBar = () => {
   return (
-    <Navbar collapseOnSelect expand="sm" variant="light" className={`navbar ${nav}`}>
+    <Navbar
+      collapseOnSelect
+      expand="sm"
+      variant="light"
+      className={`navbar ${nav}`}
+    >
       <Container>
         <Navbar.Brand
-          className="font-weight-medium gradient-text"
           as={Link}
           to="/"
         >
@@ -22,7 +26,7 @@ const NavBar = () => {
             loading="eager"
           />
         </Navbar.Brand>
-        <Navbar.Toggle />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link as={Link} to="#about" style={{ color: "black" }}>
@@ -42,6 +46,14 @@ const NavBar = () => {
             >
               Resume
             </Nav.Link>
+            <button className={changeMode}>
+              <StaticImage
+                alt="dark mode"
+                src="../images/moon.svg"
+                loading="eager"
+                className={modeIcon}
+              />
+            </button>
           </Nav>
         </Navbar.Collapse>
       </Container>
