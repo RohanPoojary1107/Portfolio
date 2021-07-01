@@ -21,6 +21,7 @@
     "gatsby": "^3.6.2",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
     "gatsby-plugin-image": "^1.8.0",
+    "gatsby-plugin-manifest": "^3.8.0",
     "gatsby-plugin-sharp": "^3.8.0",
     "gatsby-plugin-styletron": "^6.8.0",
     "gatsby-source-filesystem": "^3.8.0",

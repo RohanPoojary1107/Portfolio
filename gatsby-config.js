@@ -7,12 +7,16 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
-      resolve: `gatsby-plugin-styletron`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        // You can pass options to Styletron.
-        prefix: "_",
-        // Disable dev debug mode, enabled by default
-        debug: false,
+        name: `Rohan Poojary's Portfolio`,
+        short_name: `Rohan`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: "src/images/icon.png",
+        crossOrigin: `use-credentials`,
       },
     },
 ],

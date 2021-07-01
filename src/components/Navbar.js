@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { StaticImage } from "gatsby-plugin-image";
 import { logo, nav, changeMode, modeIcon } from "./Navbar.module.css";
+import moon from "../images/moon.svg";
 
 const NavBar = () => {
   return (
@@ -47,10 +48,9 @@ const NavBar = () => {
               Resume
             </Nav.Link>
             <button className={changeMode}>
-              <StaticImage
+              <img
                 alt="dark mode"
-                src="../images/moon.svg"
-                loading="eager"
+                src={moon}
                 className={modeIcon}
               />
             </button>

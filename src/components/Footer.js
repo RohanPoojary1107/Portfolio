@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import linkedin from "../images/linkedin.svg";
 import github from "../images/github.svg";
 import twitter from "../images/twitter.svg";
+import mail from "../images/mail.svg";
 import react from "../images/react.svg";
 import {
   socialIcons,
@@ -30,6 +31,11 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <img src={github} alt="github" className={socialIcons} />
+        </a>
+        <a
+          href="mailto:rohanpoojary10@gmail.com"
+        >
+          <img src={mail} alt="mail" className={socialIcons} />
         </a>
         <a
           href="https://twitter.com/Rohan_1107"
