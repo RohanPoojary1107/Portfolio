@@ -7,7 +7,7 @@ import Header from "./SectionHeader";
 
 const Experience = () => {
   return (
-    <Row id="experience">
+    <div id="experience">
       <Header sectionName={`<experience />`} />
       <Row className={`row ${row}`}>
         <Col className="align-self-center" xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
@@ -80,7 +80,7 @@ const Experience = () => {
           <StaticImage alt="Icube utm" src="../images/rbc.png" imgClassName={companyImg}/>
         </Col>
       </Row>
-    </Row>
+    </div>
   );
 };
 

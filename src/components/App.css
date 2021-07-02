@@ -9,7 +9,7 @@ html {
 .section-header {
     display: flex;
     padding-bottom: 42px;
-    width: 100vw;
+    width: 100%;
 }
 
 .section-title {

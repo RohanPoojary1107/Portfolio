@@ -12,12 +12,13 @@ import {
   credits,
   reactIcon,
   madeBy,
+  socials
 } from "./Footer.module.css";
 
 const Footer = () => {
   return (
     <Row className={`row ${row}`}>
-      <Col>
+      <Col xs={12} sm={6} className={`col ${socials}`}>
         <a
           href="https://www.linkedin.com/in/rohanpoojary/"
           target="_blank"
@@ -45,7 +46,7 @@ const Footer = () => {
           <img src={twitter} alt="twitter" className={socialIcons} />
         </a>
       </Col>
-      <Col className={`col ${credits}`}>
+      <Col xs={12} sm={6} className={`col ${credits}`}>
         <span className={madeBy}>Made by Rohan Poojary using</span>
         <a
           href="https://reactjs.org/"

@@ -1,10 +1,9 @@
 .socialIcons {
     padding-right: 16px;
-    width: 40px;
+    width: 35px;
 }
 
 .reactIcon {
-    margin-bottom: 5px;
     width: 30px
 }
 
@@ -14,10 +13,29 @@
 
 .row {
     padding-bottom: 16px;
+    padding-top: 120px;
 }
 
 .credits {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media (max-width: 575px) {
+    .credits {
+        justify-content: center;
+        padding-top: 5px;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
 }

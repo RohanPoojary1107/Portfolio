@@ -1,0 +1,28 @@
+.container {
+    column-gap: 10px;
+}
+
+.card {
+    border-radius: 16px;
+    box-shadow: gray 0px 0px 5px 0px;
+    margin-bottom: 1em;
+    transform: none;
+    max-width: 300px !important;
+    min-height: 20em;
+    background-color: white
+}
+
+.card:hover {
+    transform: translateY(-5px) translateZ(0px);
+    box-shadow: gray 0px 10px 16px 2px;
+}
+
+.cardContent {
+    padding: 2em 1.5em;
+    height: 100%
+}
+
+.cardTitle {
+    font-size: 24px;
+    font-weight: bold;
+}

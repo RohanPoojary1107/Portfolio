@@ -36,7 +36,7 @@ const NavBar = () => {
             <Nav.Link as={Link} to="#experience" style={{ color: "black" }}>
               Experience
             </Nav.Link>
-            <Nav.Link as={Link} to="/fun" style={{ color: "black" }}>
+            <Nav.Link as={Link} to="#projects" style={{ color: "black" }}>
               Projects
             </Nav.Link>
             <Nav.Link
