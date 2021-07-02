@@ -16,3 +16,9 @@ html {
     font-weight: bold;
     font-size: 46px;
 }
+
+@media (max-width: 575px) {
+    .section-title {
+        font-size: 32px;
+    }
+}

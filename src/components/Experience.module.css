@@ -15,3 +15,13 @@
 .jobTitle {
     padding-bottom: 16px
 }
+
+@media (max-width: 767px) {
+    .companyImgCol {
+        padding-bottom: 42px;
+    }
+
+    .row {
+        padding-bottom: 42px;
+    }
+}

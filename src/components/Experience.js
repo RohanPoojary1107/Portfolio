@@ -2,7 +2,13 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { StaticImage } from "gatsby-plugin-image";
-import { companyImg, row, companyName, jobTitle } from "./Experience.module.css"
+import {
+  companyImg,
+  row,
+  companyName,
+  jobTitle,
+  companyImgCol,
+} from "./Experience.module.css";
 import Header from "./SectionHeader";
 
 const Experience = () => {
@@ -10,9 +16,16 @@ const Experience = () => {
     <div id="experience">
       <Header sectionName={`<experience />`} />
       <Row className={`row ${row}`}>
-        <Col className="align-self-center" xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
+        <Col
+          className="align-self-center"
+          xs={{ span: 12, order: "last" }}
+          sm={10}
+          md={{ order: "first" }}
+        >
           <div className={companyName}>Wattpad</div>
-          <div className={jobTitle}>Associate Engineer | May 2021 - Present</div>
+          <div className={jobTitle}>
+            Associate Engineer | May 2021 - Present
+          </div>
           <ul>
             <li>
               Develop responsive websites for clients using HTML, CSS, PHP and
@@ -28,14 +41,30 @@ const Experience = () => {
             </li>
           </ul>
         </Col>
-        <Col className="align-self-center" xs={{ span: 12, order: "first" }} md={{ order: "last" }}>
-          <StaticImage alt="Icube utm" src="../images/wattpad.png" imgClassName={companyImg}/>
+        <Col
+          className={`col align-self-center ${companyImgCol}`}
+          xs={{ span: 12, order: "first" }}
+          md={{ order: "last" }}
+        >
+          <StaticImage
+            alt="Icube utm"
+            src="../images/wattpad.png"
+            imgClassName={companyImg}
+            style={{"max-width": "500px"}}
+          />
         </Col>
       </Row>
       <Row className={`row ${row}`}>
-        <Col className="align-self-center" xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
+        <Col
+          className="align-self-center"
+          xs={{ span: 12, order: "last" }}
+          sm={10}
+          md={{ order: "first" }}
+        >
           <div className={companyName}>ICUBE UTM</div>
-          <div className={jobTitle}>Software Developer | Sept 2020 - Feb 2021</div>
+          <div className={jobTitle}>
+            Software Developer | Sept 2020 - Feb 2021
+          </div>
           <ul>
             <li>
               Develop responsive websites for clients using HTML, CSS, PHP and
@@ -51,14 +80,30 @@ const Experience = () => {
             </li>
           </ul>
         </Col>
-        <Col className="align-self-center" xs={{ span: 12, order: "first" }} md={{ order: "last" }}>
-          <StaticImage alt="Icube utm" src="../images/icube.png" imgClassName={companyImg}/>
+        <Col
+          className={`col align-self-center ${companyImgCol}`}
+          xs={{ span: 12, order: "first" }}
+          md={{ order: "last" }}
+        >
+          <StaticImage
+            alt="Icube utm"
+            src="../images/icube.png"
+            imgClassName={companyImg}
+            style={{"max-width": "500px"}}
+          />
         </Col>
       </Row>
       <Row className={`row ${row}`}>
-        <Col className="align-self-center" xs={{ span: 12, order: "last" }} md={{ order: "first" }}>
+        <Col
+          className="align-self-center"
+          xs={{ span: 12, order: "last" }}
+          sm={10}
+          md={{ order: "first" }}
+        >
           <div className={companyName}>Royal Bank of Canada (RBC)</div>
-          <div className={jobTitle}>Quality Engineer Intern | May 2020 - Aug 2020</div>
+          <div className={jobTitle}>
+            Quality Engineer Intern | May 2020 - Aug 2020
+          </div>
           <ul>
             <li>
               Worked on the Client Cards team to automate UI Testing, authoring
@@ -76,8 +121,17 @@ const Experience = () => {
             <li>Check out my recommendation here!</li>
           </ul>
         </Col>
-        <Col xs={{ span: 12, order: "first" }} md={{ order: "last" }}>
-          <StaticImage alt="Icube utm" src="../images/rbc.png" imgClassName={companyImg}/>
+        <Col
+          className={`col align-self-center ${companyImgCol}`}
+          xs={{ span: 12, order: "first" }}
+          md={{ order: "last" }}
+        >
+          <StaticImage
+            alt="Icube utm"
+            src="../images/rbc.png"
+            imgClassName={companyImg}
+            style={{"max-width": "500px"}}
+          />
         </Col>
       </Row>
     </div>

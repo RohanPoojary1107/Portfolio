@@ -1,3 +1,10 @@
 .aboutMe {
     padding-bottom: 60px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+    .aboutMe {
+        padding-bottom: 42px;
+    }
 }

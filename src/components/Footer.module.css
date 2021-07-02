@@ -4,11 +4,11 @@
 }
 
 .reactIcon {
-    width: 30px
+    width: 26px;
 }
 
 .madeBy {
-    padding-right: 5px
+    padding: 0px 5px;
 }
 
 .row {
@@ -19,7 +19,7 @@
 .credits {
     display: flex;
     align-items: center;
-    justify-content: flex-end
+    justify-content: flex-end;
 }
 
 .socials {

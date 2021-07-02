@@ -6,6 +6,7 @@ import github from "../images/github.svg";
 import twitter from "../images/twitter.svg";
 import mail from "../images/mail.svg";
 import react from "../images/react.svg";
+import code from "../images/code.svg";
 import {
   socialIcons,
   row,
@@ -47,7 +48,8 @@ const Footer = () => {
         </a>
       </Col>
       <Col xs={12} sm={6} className={`col ${credits}`}>
-        <span className={madeBy}>Made by Rohan Poojary using</span>
+        <img src={code} alt="developed" className={reactIcon}/>
+        <span className={madeBy}>by Rohan Poojary using</span>
         <a
           href="https://reactjs.org/"
           target="_blank"
