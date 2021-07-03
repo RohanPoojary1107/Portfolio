@@ -1,15 +1,18 @@
 import React from "react";
 import Header from "./SectionHeader";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import {
   card,
   cardContent,
   cardTitle,
   cardLang,
   cardDesc,
-  container,
+  cardHeader,
+  cardFooter,
+  grid
 } from "./Projects.module.css";
+import book from "../images/book.svg";
+import lock from "../images/lock.svg";
+import github from "../images/github.svg";
 
 const Projects = () => {
   const projects = {
@@ -54,19 +57,39 @@ const Projects = () => {
   return (
     <div id="projects">
       <Header sectionName={`<projects />`} />
-      <Row noGutters className={`row ${container}`}>
+      <div className={grid}>
         {Object.keys(projects).map((key, i) => (
-          <Col md={4} sm={6} xs={12} className={`col ${card}`}>
-            <div className={cardContent}>
-              <div className={cardTitle}>{key}</div>
-              <div className={cardDesc}>{projects[key]["desc"]}</div>
-              <div className={cardLang}>
-                Languages: {projects[key]["techStack"]}
+          <div className={card}>
+            <>
+              <div className={cardHeader}>
+                <img src={book} alt="repository" width="20px" height="20px" />
+                <div className={cardTitle}>{key}</div>
               </div>
+              <div className={cardContent}>
+                <div className={cardDesc}>{projects[key]["desc"]}</div>
+                <div className={cardLang}>
+                  {/* Languages: {projects[key]["techStack"]} */}
+                  <ul>
+                    <li>Python</li>
+                    <li>Node.js</li>
+                    <li>React</li>
+                    <li>SQL</li>
+                  </ul>
+                </div>
+              </div>
+            </>
+            <div className={cardFooter}>
+              {projects[key]["isPrivate"] ? (
+                <img src={lock} alt="lock" />
+              ) : (
+                <a href="#">
+                  <img src={github} alt="github" />
+                </a>
+              )}
             </div>
-          </Col>
+          </div>
         ))}
-      </Row>
+      </div>
     </div>
   );
 };

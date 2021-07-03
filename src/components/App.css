@@ -17,8 +17,20 @@ html {
     font-size: 46px;
 }
 
+nav button span {
+    background-image: url("../images/close.svg") !important;
+    /* width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle; */
+}
+
+nav .navbar-toggler.collapsed span {
+    background-image: url("../images/menu.svg") !important;
+}
+
 @media (max-width: 575px) {
     .section-title {
         font-size: 32px;
     }
 }
+

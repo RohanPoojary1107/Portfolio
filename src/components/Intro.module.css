@@ -9,3 +9,40 @@
 .row {
     padding: 60px 0px;
 }
+
+.introImg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.imgCol {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 992px) {
+    .introImg {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .imgCol {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 42px;
+    }
+
+    .row {
+        padding: 42px 0px;
+    }
+
+    .introTitle {
+        font-size: 32px;
+    }
+
+    .shortIntro {
+        font-size: 20px;
+    }
+}

@@ -16,6 +16,11 @@
     padding-bottom: 16px
 }
 
+.companyImgCol {
+    display: flex;
+    justify-content: flex-end;
+}
+
 @media (max-width: 767px) {
     .companyImgCol {
         padding-bottom: 42px;

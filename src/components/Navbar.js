@@ -15,7 +15,6 @@ const NavBar = () => {
       variant="light"
       className={`navbar ${nav}`}
     >
-      <Container>
         <Navbar.Brand
           as={Link}
           to="/"
@@ -56,7 +55,6 @@ const NavBar = () => {
             </button>
           </Nav>
         </Navbar.Collapse>
-      </Container>
     </Navbar>
   );
 };

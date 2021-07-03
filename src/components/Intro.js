@@ -5,7 +5,8 @@ import "./Typist.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { introTitle, shortIntro, row } from "./Intro.module.css";
+import introImage from "../images/main-color.png";
+import { introTitle, shortIntro, row, introImg, imgCol } from "./Intro.module.css";
 
 const Intro = () => {
   return (
@@ -17,11 +18,11 @@ const Intro = () => {
             pushing myself outside my comfort zone.
             </div>
         </Col>
-        <Col xs={{span: 12, order: "first"}} md={{order: "last"}}>
-            <StaticImage
-            alt="Rohan Poojary smiling"
-            src="../images/main-color.png"
-            loading="eager"
+        <Col className={`col ${imgCol}`}xs={{span: 12, order: "first"}} md={{order: "last"}}>
+            <img
+            alt="Rohan Poojary"
+            src={introImage}
+            className={introImg}
             />
         </Col>
      </Row>

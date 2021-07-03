@@ -1,10 +1,15 @@
 .logo {
     width: 100%;
-    max-width: 150px;
+    max-width: 125px;
+    vertical-align: bottom;
 }
 
 .nav {
     padding: 16px 0px !important;
+}
+
+.nav button {
+    border: none;
 }
 
 .changeMode {
@@ -14,4 +19,11 @@
 
 .modeIcon {
     width: 30px
+}
+
+@media (max-width: 575px) {
+    .changeMode {
+        width:fit-content;
+        padding: 0px;
+    }
 }
