@@ -10,9 +10,7 @@ import {
   cardFooter,
   grid,
 } from "./Projects.module.css";
-// import book from "../images/book.svg";
-import lock from "../images/lock.svg";
-import { github, book } from "../icons.js";
+import { github, book, lock } from "../icons.js";
 
 const Projects = () => {
   const projects = {
@@ -86,7 +84,13 @@ const Projects = () => {
             </>
             <div className={cardFooter}>
               {projects[key]["isPrivate"] ? (
-                <img src={lock} alt="lock" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="31.5"
+                  height="36"
+                  viewBox="0 0 31.5 36"
+                  dangerouslySetInnerHTML={{ __html: lock }}
+                />
               ) : (
                 <a href="#">
                   <svg

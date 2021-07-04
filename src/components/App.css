@@ -1,11 +1,16 @@
 .light {
     --theme-page-background: #FFF;
     --theme-page-text: #111;
+    --elevated-background: #FFF;
+    --border-color: lightgray;
 }
 
 .dark {
-    --theme-page-background: #111;
+    --theme-page-background: #181818;
     --theme-page-text: #FFF;
+    --elevated-background: #212121;
+    --border-color: #383838;
+    --background-hover: #363636;
 }
 
 .app {
@@ -34,12 +39,24 @@ html {
     font-size: 46px;
 }
 
-nav button span {
+/* Light Mode Toggle Icons for Navbar */
+
+.navbar.Navbar-module--nav--dllyt.navbar.navbar-expand-sm.navbar-light button span {
     background-image: url("../images/close.svg") !important;
 }
 
-nav .navbar-toggler.collapsed span {
+.navbar.Navbar-module--nav--dllyt.navbar.navbar-expand-sm.navbar-light .navbar-toggler.collapsed span {
     background-image: url("../images/menu.svg") !important;
+}
+
+/* Dark Mode Toggle Icons for Navbar */
+
+.navbar.Navbar-module--nav--dllyt.navbar.navbar-expand-sm.navbar-dark button span {
+    background-image: url("../images/close-white.svg") !important;
+}
+
+.navbar.Navbar-module--nav--dllyt.navbar.navbar-expand-sm.navbar-dark .navbar-toggler.collapsed span {
+    background-image: url("../images/menu-white.svg") !important;
 }
 
 @media (max-width: 575px) {

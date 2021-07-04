@@ -12,13 +12,15 @@
     transform: none;
     height: 100%;
     padding: 2em 1.5em;
-    border: 1px solid lightgray;
+    background-color: var(--elevated-background);
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
 }
 
 .card:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
+    background-color: var(--background-hover);
 }
 
 .cardHeader {

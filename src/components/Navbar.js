@@ -2,12 +2,15 @@ import React from "react";
 import { Link } from "gatsby";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { StaticImage } from "gatsby-plugin-image";
-import { logo, nav, changeMode, modeIcon } from "./Navbar.module.css";
+import { logo, nav, changeMode, modeIcon, imgWrapper, sunRings, starTop, starBottom } from "./Navbar.module.css";
 import moon from "../images/moon.svg";
+import topStar from "../images/top-star.svg";
+import bottomStar from "../images/bottom-star.svg";
 import sun from "../images/sun.svg";
+import sunRing from "../images/glow.svg"
 import rohanLight from "../images/rohan.png";
 import rohanDark from "../images/rohanWhite.png"
+
 
 const NavBar = ({ theme, toggleTheme }) => {
 
@@ -17,6 +20,7 @@ const NavBar = ({ theme, toggleTheme }) => {
     <Navbar
       collapseOnSelect
       expand="sm"
+      variant={theme}
       className={`navbar ${nav}`}
     >
       <Navbar.Brand as={Link} to="/">
@@ -47,11 +51,19 @@ const NavBar = ({ theme, toggleTheme }) => {
             Resume
           </Nav.Link>
           <button className={changeMode} onClick={() => toggleTheme()}>
-            <img
-              alt="dark mode"
-              src={theme === "light" ? moon : sun}
-              className={modeIcon}
-            />
+            <div className={imgWrapper}>
+              <img
+                alt="dark mode"
+                src={theme === "light" ? moon : sun}
+                className={modeIcon}
+              />
+              {!lightMode && <img className={sunRings} src={sunRing} alt="sun rays" />}
+              {lightMode && 
+              <>
+              <img className={starTop} src={topStar} alt="star" /> 
+              <img className={starBottom} src={bottomStar} alt="star" /> 
+              </>}
+            </div>
           </button>
         </Nav>
       </Navbar.Collapse>

@@ -12,7 +12,7 @@ const Intro = () => {
   return (
      <Row className={`row ${row}`}>
         <Col className="align-self-center" xs={{span: 12, order: "last"}} md={{order: "first"}}>
-            <Typist avgTypingDelay={120} className={introTitle}>Hey, I'm Rohan.</Typist>
+            <Typist avgTypingDelay={120} startDelay={500} className={introTitle}>Hey, I'm Rohan.</Typist>
             <div className={shortIntro}>
             I'm passionate about making the web more accessible and I enjoy
             pushing myself outside my comfort zone.
