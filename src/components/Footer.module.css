@@ -38,6 +38,11 @@
     justify-content: flex-start;
 }
 
+.mailIcon path {
+    fill: none;
+    stroke: var(--theme-page-text);;
+}
+
 @media (max-width: 575px) {
     .credits {
         justify-content: center;

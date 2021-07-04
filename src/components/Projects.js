@@ -8,11 +8,11 @@ import {
   cardDesc,
   cardHeader,
   cardFooter,
-  grid
+  grid,
 } from "./Projects.module.css";
-import book from "../images/book.svg";
+// import book from "../images/book.svg";
 import lock from "../images/lock.svg";
-import github from "../images/github.svg";
+import { github, book } from "../icons.js";
 
 const Projects = () => {
   const projects = {
@@ -62,7 +62,13 @@ const Projects = () => {
           <div className={card}>
             <>
               <div className={cardHeader}>
-                <img src={book} alt="repository" width="20px" height="20px" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="31.5"
+                  height="36"
+                  viewBox="0 0 31.5 36"
+                  dangerouslySetInnerHTML={{ __html: book }}
+                />
                 <div className={cardTitle}>{key}</div>
               </div>
               <div className={cardContent}>
@@ -83,7 +89,13 @@ const Projects = () => {
                 <img src={lock} alt="lock" />
               ) : (
                 <a href="#">
-                  <img src={github} alt="github" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33.75"
+                    height="27.001"
+                    viewBox="0 0 33.75 27.001"
+                    dangerouslySetInnerHTML={{ __html: github }}
+                  />
                 </a>
               )}
             </div>

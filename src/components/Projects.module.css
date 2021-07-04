@@ -11,7 +11,6 @@
     margin-bottom: 1em;
     transform: none;
     height: 100%;
-    background-color: white;
     padding: 2em 1.5em;
     border: 1px solid lightgray;
     display: flex;
@@ -26,6 +25,12 @@
     display: flex;
     align-items: center;
     padding-bottom: 16px;
+}
+
+.cardHeader svg {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
 }
 
 .cardContent {
@@ -48,7 +53,7 @@
     margin-top: auto;
 }
 
-.cardFooter img {
+.cardFooter svg {
     width: 20px;
     height: 20px;
 }

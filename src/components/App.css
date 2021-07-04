@@ -1,5 +1,22 @@
+.light {
+    --theme-page-background: #FFF;
+    --theme-page-text: #111;
+}
+
+.dark {
+    --theme-page-background: #111;
+    --theme-page-text: #FFF;
+}
+
 .app {
     font-family: "inter";
+    background: var(--theme-page-background);
+    color: var(--theme-page-text);
+}
+
+svg path {
+    color: var(--theme-page-text);
+    fill : currentColor;
 }
 
 html {
@@ -19,9 +36,6 @@ html {
 
 nav button span {
     background-image: url("../images/close.svg") !important;
-    /* width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle; */
 }
 
 nav .navbar-toggler.collapsed span {

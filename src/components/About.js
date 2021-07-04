@@ -12,9 +12,9 @@ const About = () => {
         <p className={aboutMe}>
           My Mantra: “You have to keep working on your craft, specially when
           nobody is watching” <br /><br />
-          I am currently seeking SWE roles for Summer 2021 and am looking for an
+          {/* I am currently seeking SWE roles for Summer 2021 and am looking for an
           environment that fosters collaboration, values career development, and
-          believes in supporting a growth mindset. <br /><br />
+          believes in supporting a growth mindset. <br /><br /> */}
           I have been working with Python and Java for two years and am highly
           experienced in working in an Agile environment. My favorite side project
           so far has to be developing an anonymous hiring app using Flutter with
