@@ -57,7 +57,7 @@ const Projects = () => {
       <Header sectionName={`<projects />`} />
       <div className={grid}>
         {Object.keys(projects).map((key, i) => (
-          <div className={card}>
+          <div className={card} key={i}>
             <>
               <div className={cardHeader}>
                 <svg

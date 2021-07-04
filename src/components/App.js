@@ -6,6 +6,7 @@ import Experience from "./Experience";
 import Projects from "./Projects";
 import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
+import ScrollToTop from "./ScrollToTop";
 import "./App.css";
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
         <About />
         <Experience />
         <Projects />
+        <ScrollToTop />
         <Footer />
       </Container>
     </div>
