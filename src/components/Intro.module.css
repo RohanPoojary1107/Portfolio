@@ -10,11 +10,11 @@
     padding: 60px 0px;
 }
 
-.introImg {
+/* .introImg {
     width: 100%;
     max-width: 500px;
     height: auto;
-}
+} */
 
 .imgCol {
     display: flex;
@@ -22,9 +22,9 @@
 }
 
 @media (max-width: 992px) {
-    .introImg {
+    /* .introImg {
         max-width: 400px;
-    }
+    } */
 }
 
 @media (max-width: 767px) {

@@ -3,6 +3,14 @@ module.exports = {
     title: "Rohan Poojary",
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: 'images'
+      }
+    },
+    'gatsby-transformer-sharp',
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
@@ -15,8 +23,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: "src/images/icon.png",
-        crossOrigin: `use-credentials`,
+        icon: "src/images/icon.png"
       },
     },
 ],
