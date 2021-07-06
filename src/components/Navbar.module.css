@@ -27,6 +27,7 @@
 .imgWrapper {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
 }
 
 @-moz-keyframes spin {

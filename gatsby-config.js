@@ -10,6 +10,13 @@ module.exports = {
         name: 'images'
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/static`,
+        name: 'pdf'
+      }
+    },
     'gatsby-transformer-sharp',
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",

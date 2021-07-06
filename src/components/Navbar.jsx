@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { logo, nav, changeMode, modeIcon, imgWrapper, sunRings, starTop, starBottom } from "./Navbar.module.css";
@@ -15,6 +15,19 @@ import rohanDark from "../images/rohanWhite.png"
 const NavBar = ({ theme, toggleTheme }) => {
 
   const lightMode = theme === 'light';
+  const data = useStaticQuery(graphql`
+  {
+    allFile(filter: { extension: { eq: "pdf" } }) {
+      edges {
+        node {
+          publicURL
+          name
+        }
+      }
+    }
+  }`);
+
+  const resume = data.allFile.edges[0];
 
   return (
     <Navbar
@@ -43,8 +56,9 @@ const NavBar = ({ theme, toggleTheme }) => {
             Projects
           </Nav.Link>
           <Nav.Link
-            href=""
+            href={resume.node.publicURL}
             target="_blank"
+            rel="noopener noreferrer"
             className="font-weight-medium"
             style={{ color: lightMode ? 'black': 'white' }}
           >
