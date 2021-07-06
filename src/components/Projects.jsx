@@ -12,52 +12,79 @@ import {
 } from "./Projects.module.css";
 import { github, book, lock } from "../icons.js";
 
-const Projects = () => {
-  const projects = {
-    "TDSB Homework Management Interface": {
-      desc: "An application created for Toronto District School Board, with a Flask back-end and a Vue front-end.",
-      techStack: "Python (Flask), Vue.js, Bootstrap, SQL",
-      link: "https://github.com/gazijarin/TDSBHomeworkManagement",
-      open: "https://tdsb-app.herokuapp.com/",
-    },
-    "Adam A.I.": {
-      desc: "A self-learning A.I. that learns to traverse through a complex maze using the genetic algorithm.",
-      techStack: "Javascript, HTML / CSS",
-      link: "https://github.com/gazijarin/adamai",
-      open: "https://gazijarin.github.io/AdamAI/",
-    },
-    Truth: {
-      desc: "A three.js simulation of the planet system revolving around a monolith.",
-      techStack: "Three.js",
-      link: "https://github.com/gazijarin/truth",
-      open: "https://gazijarin.github.io/Truth/",
-    },
-    "Odin Bot": {
-      desc: "A Telegram bot that helps you excel on your daily tasks through Node NLP.",
-      techStack: "Javascript, Node.js, Natural NLP, Telegram API",
-      link: "https://github.com/gazijarin/OdinBot",
-      open: "",
-    },
-    "Game Centre": {
-      desc: "An Android app consisting of three board games, including multiplayer, autosave, user authentication, etc.",
-      techStack: "Java, Android Studio",
-      link: "https://github.com/gazijarin/gamecentre",
-      open: "",
-    },
-    "Minimax Stonehenge": {
-      desc: "Two-player, zero-sum game with a strategic Minimax artificial intelligence.",
-      techStack: "Python",
-      link: "https://github.com/gazijarin/stonehenge",
-      open: "",
-    },
-  };
+const projectList = [
+  {
+    name: "Video Editor",
+    desc: "A simple, user friendly video editor on the Web.",
+    techStack: ["React", "Node.js", "Express", "MongoDB"],
+    isPrivate: false,
+    link: "https://github.com/RohanPoojary1107/Video-editor",
+  },
+  {
+    name: "Fortnite 2D MMOG",
+    desc: "A 2-dimentional MMOG implementation of Fortnite built using WebSockets.",
+    techStack: ["React", "Node.js", "Express", "mobile API"],
+    isPrivate: true,
+    link: "",
+  },
+  {
+    name: "Arezue",
+    desc: "An annoymous hiring platform aimed to reduce discrimination in the job hiring process.",
+    techStack: ["Flutter", "Dart", "Node.js", "Express"],
+    isPrivate: false,
+    link: "https://github.com/RohanPoojary1107/Arezue-Frontend",
+  },
+  {
+    name: "Othello",
+    desc: "A two player board game made using object-oriented design principles and design patterns like MVC.",
+    techStack: ["Java", "JavaFX", "CSS", "Agile"],
+    isPrivate: true,
+    link: "",
+  },
+  {
+    name: "Vigilant App",
+    desc: "An app dedicated to increase public safety and awareness by using quick and easy to deploy Geofence technology.",
+    techStack: ["Java", "Firebase", "Radar API"],
+    isPrivate: false,
+    link: "https://github.com/RohanPoojary1107/MyVigilantApp",
+  },
+  {
+    name: "Chat Server & Client",
+    desc: "A TCP chat server and client following a text-based protocol and ability to share emotes!",
+    techStack: ["C", "Make"],
+    isPrivate: true,
+    link: "",
+  },
+  {
+    name: "Doodle Jump",
+    desc: "A basic implementation of Doodle Jump, made completely using assembly programming following MIPS architecture.",
+    techStack: ["Assembly", "MARS"],
+    isPrivate: true,
+    link: "",
+  },
+  {
+    name: "Spreadsheet Software",
+    desc: "A static type inferencer and checker for a spreadsheet language.",
+    techStack: ["Racket", "Haskell"],
+    isPrivate: true,
+    link: "",
+  },
+  {
+    name: "Sound Manipulation",
+    desc: "Manipulating sounds by adding sound effects to them like fade-in, fade-out and panning from left to right.",
+    techStack: ["C", "Make"],
+    isPrivate: true,
+    link: "",
+  },
+];
 
+const Projects = () => {
   return (
     <div id="projects">
       <Header sectionName={`<projects />`} />
       <div className={grid}>
-        {Object.keys(projects).map((key, i) => (
-          <div className={card} key={i}>
+        {projectList.map((project) => (
+          <div className={card} key={project.name}>
             <>
               <div className={cardHeader}>
                 <svg
@@ -67,23 +94,21 @@ const Projects = () => {
                   viewBox="0 0 31.5 36"
                   dangerouslySetInnerHTML={{ __html: book }}
                 />
-                <div className={cardTitle}>{key}</div>
+                <div className={cardTitle}>{project.name}</div>
               </div>
               <div className={cardContent}>
-                <div className={cardDesc}>{projects[key]["desc"]}</div>
+                <div className={cardDesc}>{project.desc}</div>
                 <div className={cardLang}>
-                  {/* Languages: {projects[key]["techStack"]} */}
                   <ul>
-                    <li>Python</li>
-                    <li>Node.js</li>
-                    <li>React</li>
-                    <li>SQL</li>
+                    {project.techStack.map((tool, index) => (
+                      <li key={index}>{tool}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </>
             <div className={cardFooter}>
-              {projects[key]["isPrivate"] ? (
+              {project.isPrivate ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="31.5"
@@ -92,7 +117,11 @@ const Projects = () => {
                   dangerouslySetInnerHTML={{ __html: lock }}
                 />
               ) : (
-                <a href="#">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="33.75"

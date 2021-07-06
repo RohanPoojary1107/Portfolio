@@ -8,8 +8,7 @@ import {
   row,
   companyName,
   jobTitle,
-  companyImgCol,
-  link,
+  companyImgCol
 } from "./Experience.module.css";
 import Header from "./SectionHeader";
 
@@ -64,7 +63,7 @@ const MyExperience = ({ data }) => {
         }
 
         return (
-          <Row className={`row ${row}`}>
+          <Row className={`row ${row}`} key={job.imgName}>
             <Col
               className="align-self-center"
               xs={{ span: 12, order: "last" }}
@@ -76,8 +75,8 @@ const MyExperience = ({ data }) => {
                 {job.jobTitle} | {job.duration}
               </div>
               <ul>
-                {job.desc.map((bullet) => (
-                  <li>{bullet}</li>
+                {job.desc.map((bullet, index) => (
+                  <li key={index}>{bullet}</li>
                 ))}
               </ul>
             </Col>
