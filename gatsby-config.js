@@ -1,8 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: "Rohan Poojary",
+    title: "Rohan Poojary's Portfolio",
+    description: `Hey, I'm Rohan! I'm passionate about making the web more accessible and I enjoy pushing myself outside my comfort zone.`,
+    siteUrl: `https://www.rohanpoojary.com`,
+    author: `@Rohan_1107`,
+    image: `https://rohanpoojary.com/img/cover.png`,
+    keywords: `Rohan Poojary, intern, software engineer, software developer, rohan poojary resume, rohan poojary portfolio, computer science student, student, University of Toronto, Wattpad Intern, RBC intern, University of Toronto - Mississauga`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,8 +23,9 @@ module.exports = {
         name: 'pdf'
       }
     },
-    'gatsby-transformer-sharp',
+    "gatsby-transformer-sharp",
     "gatsby-plugin-gatsby-cloud",
+    `gatsby-plugin-sitemap`,
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
@@ -31,6 +38,22 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: "src/images/icon.png"
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.rohanpoojary.com',
+        sitemap: 'https://www.rohanpoojary.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-158816449-1",
+        head: true,
+        enableWebVitalsTracking: true
       },
     },
 ],

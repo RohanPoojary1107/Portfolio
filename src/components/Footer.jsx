@@ -2,6 +2,7 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import react from "../images/react.svg";
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { github, code, twitter, linkedin, mail } from "../icons.js";
 import {
   socialIcons,
@@ -17,7 +18,7 @@ const Footer = () => {
   return (
     <Row className={`row ${row}`}>
       <Col xs={12} sm={6} className={`col ${socials}`}>
-        <a
+        <OutboundLink
           href="https://www.linkedin.com/in/rohanpoojary/"
           target="_blank"
           rel="noopener noreferrer"
@@ -30,8 +31,8 @@ const Footer = () => {
             className={socialIcons}
             dangerouslySetInnerHTML={{ __html: linkedin }}
           />
-        </a>
-        <a
+        </OutboundLink>
+        <OutboundLink
           href="https://github.com/RohanPoojary1107"
           target="_blank"
           rel="noopener noreferrer"
@@ -44,8 +45,8 @@ const Footer = () => {
             className={socialIcons}
             dangerouslySetInnerHTML={{ __html: github }}
           />
-        </a>
-        <a href="mailto:rohanpoojary10@gmail.com">
+        </OutboundLink>
+        <OutboundLink href="mailto:rohanpoojary10@gmail.com">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="34.178"
@@ -54,8 +55,8 @@ const Footer = () => {
             className={`${socialIcons} ${mailIcon}`}
             dangerouslySetInnerHTML={{ __html: mail }}
           />
-        </a>
-        <a
+        </OutboundLink>
+        <OutboundLink
           href="https://twitter.com/Rohan_1107"
           target="_blank"
           rel="noopener noreferrer"
@@ -68,7 +69,7 @@ const Footer = () => {
             className={socialIcons}
             dangerouslySetInnerHTML={{ __html: twitter }}
           />
-        </a>
+        </OutboundLink>
       </Col>
       <Col xs={12} sm={6} className={`col ${credits}`}>
         <svg
@@ -80,13 +81,13 @@ const Footer = () => {
           dangerouslySetInnerHTML={{ __html: code }}
         />
         <span className={madeBy}>by Rohan Poojary using</span>
-        <a
+        <OutboundLink
           href="https://reactjs.org/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img src={react} alt="react" className={reactIcon} />
-        </a>
+        </OutboundLink>
       </Col>
     </Row>
   );
