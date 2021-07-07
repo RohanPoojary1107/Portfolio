@@ -8,7 +8,7 @@ const Seo = ({
   lang = "en",
   meta = [],
   title,
-  type,
+  type = "website",
   url = "/",
   image,
   keywords,
@@ -22,7 +22,7 @@ const Seo = ({
   return (
     <Helmet
       htmlAttributes={{ lang }}
-      title={title}
+      title={metaTitle}
       titleTemplate={`%s`}
       meta={[
         {
