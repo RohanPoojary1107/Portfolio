@@ -18,6 +18,7 @@ export default function ScrollToTop() {
       top: 0,
       behavior: "smooth",
     });
+    document && document.querySelector(".navbar-brand").focus();
   };
 
   useEffect(() => {
@@ -31,13 +32,14 @@ export default function ScrollToTop() {
   return (
     <span className={scroll}>
       {isVisible && (
-        <button onClick={scrollToTop} className={scrollBtn}>
+        <button onClick={scrollToTop} className={scrollBtn} aria-label="Scroll to top">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="81.405"
             height="46.539"
             viewBox="0 0 81.405 46.539"
             dangerouslySetInnerHTML={{ __html: arrowUp }}
+            aria-hidden
           />
         </button>
       )}

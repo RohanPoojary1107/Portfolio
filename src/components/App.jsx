@@ -54,8 +54,8 @@ const App = ({ data, isInvalid=false }) => {
             <About />
             <Experience />
             <Projects />
-            <ScrollToTop />
             <Footer />
+            <ScrollToTop />
           </Container>
         </>
       )}

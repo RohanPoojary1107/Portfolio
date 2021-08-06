@@ -22,6 +22,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/rohanpoojary/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="linkedin"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,12 +31,14 @@ const Footer = () => {
             viewBox="0 0 31.5 31.499"
             className={socialIcons}
             dangerouslySetInnerHTML={{ __html: linkedin }}
+            aria-hidden
           />
         </OutboundLink>
         <OutboundLink
           href="https://github.com/RohanPoojary1107"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="github"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +47,10 @@ const Footer = () => {
             viewBox="0 0 33.75 27.001"
             className={socialIcons}
             dangerouslySetInnerHTML={{ __html: github }}
+            aria-hidden
           />
         </OutboundLink>
-        <OutboundLink href="mailto:rohanpoojary10@gmail.com">
+        <OutboundLink href="mailto:rohanpoojary10@gmail.com" aria-label="email">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="34.178"
@@ -54,12 +58,14 @@ const Footer = () => {
             viewBox="0 0 34.178 27"
             className={`${socialIcons} ${mailIcon}`}
             dangerouslySetInnerHTML={{ __html: mail }}
+            aria-hidden
           />
         </OutboundLink>
         <OutboundLink
           href="https://twitter.com/Rohan_1107"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="twitter"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -68,10 +74,12 @@ const Footer = () => {
             viewBox="0 0 36 29.239"
             className={socialIcons}
             dangerouslySetInnerHTML={{ __html: twitter }}
+            aria-hidden
           />
         </OutboundLink>
       </Col>
       <Col xs={12} sm={6} className={`col ${credits}`}>
+        <div className="sr-only">Developed by Rohan Poojary using React</div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="45.004"
@@ -79,8 +87,9 @@ const Footer = () => {
           viewBox="0 0 45.004 35.997"
           className={reactIcon}
           dangerouslySetInnerHTML={{ __html: code }}
+          aria-hidden
         />
-        <span className={madeBy}>by Rohan Poojary using</span>
+        <span className={madeBy} aria-hidden>by Rohan using</span>
         <OutboundLink
           href="https://reactjs.org/"
           target="_blank"

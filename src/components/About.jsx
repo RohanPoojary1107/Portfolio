@@ -8,7 +8,7 @@ const About = () => {
   return (
     <Row id="about">
       <Col xs={12} md={10}>
-        <Header sectionName={`<about me />`} />
+        <Header sectionName="about me" />
         <p className={aboutMe}>
           My Mantra: “You have to keep working on your craft, specially when
           nobody is watching” <br /><br />

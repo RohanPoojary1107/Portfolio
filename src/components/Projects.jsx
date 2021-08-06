@@ -81,7 +81,7 @@ const projectList = [
 const Projects = () => {
   return (
     <div id="projects">
-      <Header sectionName={`<projects />`} />
+      <Header sectionName="projects" />
       <div className={grid}>
         {projectList.map((project) => (
           <div className={card} key={project.name}>
@@ -93,11 +93,13 @@ const Projects = () => {
                   height="36"
                   viewBox="0 0 31.5 36"
                   dangerouslySetInnerHTML={{ __html: book }}
+                  aria-hidden
                 />
                 <div className={cardTitle}>{project.name}</div>
               </div>
               <div className={cardContent}>
                 <div className={cardDesc}>{project.desc}</div>
+                <span className="sr-only">Technology stack</span>
                 <div className={cardLang}>
                   <ul>
                     {project.techStack.map((tool, index) => (
@@ -115,12 +117,14 @@ const Projects = () => {
                   height="36"
                   viewBox="0 0 31.5 36"
                   dangerouslySetInnerHTML={{ __html: lock }}
+                  aria-hidden
                 />
               ) : (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="view github repository"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -128,6 +132,7 @@ const Projects = () => {
                     height="27.001"
                     viewBox="0 0 33.75 27.001"
                     dangerouslySetInnerHTML={{ __html: github }}
+                    aria-hidden
                   />
                 </a>
               )}

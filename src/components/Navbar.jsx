@@ -67,15 +67,15 @@ const NavBar = ({ theme, toggleTheme }) => {
           <button className={changeMode} onClick={() => toggleTheme()}>
             <div className={imgWrapper}>
               <img
-                alt="dark mode"
+                alt={`toggle ${theme} mode`}
                 src={theme === "light" ? moon : sun}
                 className={modeIcon}
               />
-              {!lightMode && <img className={sunRings} src={sunRing} alt="sun rays" />}
+              {!lightMode && <img className={sunRings} src={sunRing} alt="" />}
               {lightMode && 
               <>
-              <img className={starTop} src={topStar} alt="star" /> 
-              <img className={starBottom} src={bottomStar} alt="star" /> 
+              <img className={starTop} src={topStar} alt="" /> 
+              <img className={starBottom} src={bottomStar} alt="" /> 
               </>}
             </div>
           </button>

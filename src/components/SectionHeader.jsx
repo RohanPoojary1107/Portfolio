@@ -3,9 +3,7 @@ import React from "react";
 const Header = ({ sectionName }) => {
   return (
     <div className="section-header">
-      <div>
-        <span className="section-title">{sectionName}</span>
-      </div>
+      <h2 aria-label={sectionName}>{`<${sectionName} />`}</h2>
     </div>
   );
 };

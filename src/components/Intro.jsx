@@ -21,7 +21,7 @@ const MyIntro = ({data, theme}) => {
             </div>
         </Col>
         <Col className={`col ${imgCol}`}xs={{span: 12, order: "first"}} md={{order: "last"}}>
-            <GatsbyImage image={image} alt="Rohan Poojary" />
+            <GatsbyImage image={image} alt="Rohan Poojary" aria-hidden/>
         </Col>
      </Row>
   );

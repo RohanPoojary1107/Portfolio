@@ -50,7 +50,7 @@ const jobList = [
 const MyExperience = ({ data }) => {
   return (
     <div id="experience">
-      <Header sectionName={`<experience />`} />
+      <Header sectionName="experience" />
       {jobList.map((job) => {
         let image = "";
 
@@ -89,6 +89,7 @@ const MyExperience = ({ data }) => {
                 image={image}
                 alt={job.imgName}
                 imgClassName={companyImg}
+                aria-hidden
               />
             </Col>
           </Row>

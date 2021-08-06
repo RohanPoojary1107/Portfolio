@@ -35,9 +35,20 @@ html {
     width: 100%;
 }
 
-.section-title {
-    font-weight: bold;
+.section-header h2 {
+    font-weight: 700;
     font-size: 46px;
+}
+
+.sr-only {
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0)
 }
 
 /* Light Mode Toggle Icons for Navbar */
