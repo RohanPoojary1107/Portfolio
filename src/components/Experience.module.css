@@ -6,15 +6,6 @@
     padding-bottom: 120px;
 }
 
-/* .link {
-    color: var(--theme-page-text);
-    font-weight: bold;
-}
-
-.link:hover {
-    text-decoration: none;
-} */
-
 .companyName {
     font-size: 24px;
     font-weight: bold;
@@ -32,6 +23,7 @@
 
 @media (max-width: 767px) {
     .companyImgCol {
+        justify-content: flex-start;
         padding-bottom: 42px;
     }
 

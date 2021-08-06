@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./SectionHeader";
 import Row from "react-bootstrap/Row";
-import {aboutMe} from "./About.module.css"
+import { aboutMe } from "./About.module.css"
 import Col from "react-bootstrap/Col";
 
 const About = () => {

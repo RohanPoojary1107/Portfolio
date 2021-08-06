@@ -72,7 +72,7 @@ html {
 }
 
 @media (max-width: 575px) {
-    .section-title {
+    .section-header h2 {
         font-size: 32px;
     }
 }

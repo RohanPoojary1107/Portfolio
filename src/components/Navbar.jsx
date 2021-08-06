@@ -39,6 +39,8 @@ const NavBar = ({ theme, toggleTheme }) => {
       <Navbar.Brand as={Link} to="/">
         <img
           alt="Rohan Poojary logo"
+          height="25px"
+          width="125px"
           src={lightMode ? rohanLight : rohanDark}
           className={logo}
         />
