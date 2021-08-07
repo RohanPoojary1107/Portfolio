@@ -1,39 +1,45 @@
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+    <img alt="Gatsby" src="https://user-images.githubusercontent.com/47334631/128605379-d686b983-4947-4c7f-9f23-82bba3219ec8.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  My Personal Website!
 </h1>
+<p align="center">
+  <a href="https://www.rohanpoojary.com" target="_blank" rel="noopener noreferrer">rohanpoojary.com</a> was built using React, Gatsby and React Bootstrap.
+</p>
+
+<img width="1384" alt="cover" src="https://user-images.githubusercontent.com/47334631/128605292-ba9614bb-654d-4dfa-bafd-de4d29046f73.png">
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1. Install the dependencies
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+   ```sh
+   npm install
+   ```
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+1. **Deploy Locally.**
 
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
+    Navigate into the project's directory and start it up.
 
     ```shell
-    cd my-gatsby-site/
     npm run develop
     ```
 
 3.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000!
+    The site should now be running at http://localhost:8000
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+4.  **Learn more** :open_book:
 
-4.  **Learn more**
+    ### React
+    - [Documentation](https://reactjs.org/docs/getting-started.html) 
+    
+    - [Tutorials](https://reactjs.org/tutorial/tutorial.html)
+
+    ### Gatsby
 
     - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
@@ -46,6 +52,9 @@
     - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
     - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    ### React Bootstrap
+    - [Documentation](https://react-bootstrap.github.io/)
 
 ## 🚀 Quick start (Gatsby Cloud)
 
