@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fontsource/inter";
 
 const notFound = () => {
-  return <App isInvalid/>;
+  return <App isInvalid />;
 };
 
 export default notFound;

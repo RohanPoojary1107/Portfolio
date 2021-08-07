@@ -8,7 +8,7 @@ import {
   row,
   companyName,
   jobTitle,
-  companyImgCol
+  companyImgCol,
 } from "./Experience.module.css";
 import Header from "./SectionHeader";
 

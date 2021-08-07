@@ -32,7 +32,11 @@ export default function ScrollToTop() {
   return (
     <span className={scroll}>
       {isVisible && (
-        <button onClick={scrollToTop} className={scrollBtn} aria-label="Scroll to top">
+        <button
+          onClick={scrollToTop}
+          className={scrollBtn}
+          aria-label="Scroll to top"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="81.405"

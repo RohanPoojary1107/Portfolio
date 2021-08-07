@@ -2,17 +2,19 @@
   "name": "rohan-poojary",
   "version": "1.0.0",
   "private": true,
-  "description": "Rohan Poojary",
+  "description": "Hey, I'm Rohan! I'm passionate about making the web more accessible and I enjoy pushing myself outside my comfort zone.",
   "author": "Rohan Poojary <rohanpoojary10@gmail.com>",
   "keywords": [
-    "gatsby"
+    "Rohan Poojary",
+    "Portfolio"
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
     "@fontsource/inter": "^4.4.5",
@@ -20,7 +22,7 @@
     "babel-plugin-remove-graphql-queries": "^2.16.1",
     "bootstrap": "^4.6.0",
     "dompurify": "^2.2.9",
-    "gatsby": "^3.6.2",
+    "gatsby": "^3.11.0",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
     "gatsby-plugin-google-analytics": "^3.8.0",
     "gatsby-plugin-image": "^1.8.0",
@@ -41,5 +43,9 @@
     "react-typist": "^2.0.5",
     "styletron-engine-atomic": "^1.4.8",
     "styletron-react": "^6.0.1"
-  }
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  },
+  "license": "MIT"
 }

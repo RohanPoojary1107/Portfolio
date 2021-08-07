@@ -2,7 +2,7 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import react from "../images/react.svg";
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { github, code, twitter, linkedin, mail } from "../icons.js";
 import {
   socialIcons,
@@ -89,7 +89,9 @@ const Footer = () => {
           dangerouslySetInnerHTML={{ __html: code }}
           aria-hidden
         />
-        <span className={madeBy} aria-hidden>by Rohan using</span>
+        <span className={madeBy} aria-hidden>
+          by Rohan using
+        </span>
         <OutboundLink
           href="https://reactjs.org/"
           target="_blank"

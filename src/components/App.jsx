@@ -11,7 +11,7 @@ import ScrollToTop from "./ScrollToTop";
 import NotFound from "./NotFound";
 import "./App.css";
 
-const App = ({ data, isInvalid=false }) => {
+const App = ({ data, isInvalid = false }) => {
   const [theme, setTheme] = useState("light");
 
   const setMode = (mode) => {
@@ -39,7 +39,10 @@ const App = ({ data, isInvalid=false }) => {
     <div className={`app ${theme}`}>
       {isInvalid ? (
         <>
-          <Seo title="Rohan Poojary - 404" description="Oops! Page not Found :(" />
+          <Seo
+            title="Rohan Poojary - 404"
+            description="Oops! Page not Found :("
+          />
           <Container fluid="lg">
             <NavBar theme={theme} toggleTheme={toggleTheme} />
             <NotFound />
