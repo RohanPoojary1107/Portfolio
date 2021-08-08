@@ -91,7 +91,7 @@ const NavBar = ({ theme, toggleTheme }) => {
             <button className={changeMode} onClick={() => toggleTheme()}>
               <div className={imgWrapper}>
                 <img
-                  alt={`toggle ${theme} mode`}
+                  alt={`toggle ${theme === "light" ? "dark" : "light"} mode`}
                   src={theme === "light" ? moon : sun}
                   className={modeIcon}
                 />
