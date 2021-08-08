@@ -51,6 +51,20 @@ html {
     clip: rect(0, 0, 0, 0)
 }
 
+.skip-link {
+    position:absolute;
+    background: #388bfd;
+    color: white;
+    z-index: 1;
+    padding: 5px;
+    margin-top: 15px;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: translateY(0%);
+}
+
 /* Light Mode Toggle Icons for Navbar */
 
 .navbar.Navbar-module--nav--dllyt.navbar.navbar-expand-sm.navbar-light button span {
