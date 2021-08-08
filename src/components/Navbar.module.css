@@ -86,3 +86,12 @@
     padding: 0px;
   }
 }
+
+/* Remove animation for users who prefer reduced motion. */
+@media (prefers-reduced-motion) {
+  .sunRings, .starTop, .starBottom {
+    animation: none;
+    -webkit-animation: none;
+    -moz-animation: none;
+  }
+}
