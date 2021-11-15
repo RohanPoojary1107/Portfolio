@@ -15,6 +15,7 @@ import Header from "./SectionHeader";
 const jobList = [
   {
     company: "Wattpad",
+    link: "https://www.wattpad.com",
     jobTitle: "Associate Engineer",
     duration: "May 2021 - Present",
     imgName: "wattpad",
@@ -25,6 +26,7 @@ const jobList = [
   },
   {
     company: "ICUBE UTM",
+    link: "https://icubeutm.ca/",
     jobTitle: "Software Developer",
     duration: "Sept 2020 - Feb 2021",
     imgName: "icube",
@@ -36,6 +38,7 @@ const jobList = [
   },
   {
     company: "Royal Bank of Canada",
+    link: "https://www.rbcroyalbank.com/personal.html",
     jobTitle: "Quality Engineer Intern",
     duration: "May 2020 - Aug 2020",
     imgName: "rbc",
@@ -70,7 +73,9 @@ const MyExperience = ({ data }) => {
               sm={10}
               md={{ order: "first" }}
             >
-              <div className={companyName}>{job.company}</div>
+              <div className={companyName}>
+                <a href={job.link}>{job.company}</a>
+              </div>
               <div className={jobTitle}>
                 {job.jobTitle} | {job.duration}
               </div>

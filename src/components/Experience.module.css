@@ -12,6 +12,14 @@
     padding-bottom: 16px;
 }
 
+.companyName a {
+    color: var(--theme-page-text);
+}
+
+.companyName a:hover {
+    color: var(--theme-page-text);
+}
+
 .jobTitle {
     padding-bottom: 16px
 }
