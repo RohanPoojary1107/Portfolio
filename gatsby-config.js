@@ -33,11 +33,18 @@ module.exports = {
       options: {
         name: `Rohan Poojary's Portfolio`,
         short_name: `Rohan`,
+        description: `Rohan Poojary's Portfolio`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#FFF`,
+        theme_color: `#FFF`,
         display: `standalone`,
-        icon: "src/images/icon.png"
+        icon: `src/images/icon.png`
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`],
       },
     },
     {
