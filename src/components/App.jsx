@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
 import ScrollToTop from "./ScrollToTop";
 import NotFound from "./NotFound";
+import { ThemeContext } from "../utilities/theme";
 import "./App.css";
 
 const App = ({ data, isInvalid = false }) => {
@@ -38,29 +39,29 @@ const App = ({ data, isInvalid = false }) => {
   return (
     <div className={`app ${theme}`}>
       {isInvalid ? (
-        <>
+        <ThemeContext.Provider value={theme}>
           <Seo
             title="Rohan Poojary - 404"
             description="Oops! Page not Found :("
           />
           <Container fluid="lg">
-            <NavBar theme={theme} toggleTheme={toggleTheme} />
+            <NavBar toggleTheme={toggleTheme} />
             <NotFound />
           </Container>
-        </>
+        </ThemeContext.Provider >
       ) : (
-        <>
+        <ThemeContext.Provider value={theme}>
           <Seo data={data} />
           <Container fluid="lg">
-            <NavBar theme={theme} toggleTheme={toggleTheme} />
-            <Intro theme={theme} />
+            <NavBar toggleTheme={toggleTheme} />
+            <Intro />
             <About />
             <Experience />
             <Projects />
             <Footer />
             <ScrollToTop />
           </Container>
-        </>
+        </ThemeContext.Provider >
       )}
     </div>
   );
