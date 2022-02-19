@@ -12,6 +12,7 @@ import {
   madeBy,
   socials,
   mailIcon,
+  linkedIn
 } from "./Footer.module.css";
 
 const Footer = () => {
@@ -29,7 +30,7 @@ const Footer = () => {
             width="31.5"
             height="31.499"
             viewBox="0 0 31.5 31.499"
-            className={socialIcons}
+            className={`${socialIcons} ${linkedIn}`}
             dangerouslySetInnerHTML={{ __html: linkedin }}
             aria-hidden
           />

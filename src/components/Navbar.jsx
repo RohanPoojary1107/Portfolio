@@ -12,6 +12,8 @@ import {
   starTop,
   starBottom,
 } from "./Navbar.module.css";
+import { useTheme } from "../utilities/theme";
+
 import moon from "../images/moon.svg";
 import topStar from "../images/top-star.svg";
 import bottomStar from "../images/bottom-star.svg";
@@ -20,7 +22,8 @@ import sunRing from "../images/glow.svg";
 import rohanLight from "../images/rohan.png";
 import rohanDark from "../images/rohanWhite.png";
 
-const NavBar = ({ theme, toggleTheme }) => {
+const NavBar = ({ toggleTheme }) => {
+  const theme = useTheme();
   const lightMode = theme === "light";
   const data = useStaticQuery(graphql`
     {

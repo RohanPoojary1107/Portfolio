@@ -7,10 +7,11 @@ import Row from "react-bootstrap/Row";
 import { graphql, StaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { introTitle, shortIntro, row, imgCol } from "./Intro.module.css";
+import { useTheme } from "../utilities/theme";
 
-const MyIntro = ({ data, theme }) => {
+const MyIntro = ({ data }) => {
   const image =
-    theme === "light"
+  useTheme() === "light"
       ? getImage(data.rohanColor.childImageSharp)
       : getImage(data.rohanGray.childImageSharp);
 
