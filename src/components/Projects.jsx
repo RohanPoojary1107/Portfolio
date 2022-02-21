@@ -11,6 +11,7 @@ import {
   grid,
 } from "./Projects.module.css";
 import { github, book, lock } from "../icons.js";
+import { Badge } from "react-bootstrap";
 
 const projectList = [
   {
@@ -101,11 +102,9 @@ const Projects = () => {
                 <div className={cardDesc}>{project.desc}</div>
                 <span className="sr-only">Technology stack</span>
                 <div className={cardLang}>
-                  <ul>
-                    {project.techStack.map((tool, index) => (
-                      <li key={index}>{tool}</li>
-                    ))}
-                  </ul>
+                  {project.techStack.map((tool, index) => (
+                    <Badge pill variant="dark" key={index}>{tool}</Badge>
+                  ))}
                 </div>
               </div>
             </>
