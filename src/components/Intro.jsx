@@ -20,7 +20,7 @@ const MyIntro = ({ data }) => {
       <Col
         className="align-self-center"
         xs={{ span: 12, order: "last" }}
-        md={{ order: "first" }}
+        md={{ span: true, order: "first" }}
       >
         <Typist avgTypingDelay={120} startDelay={500} className={introTitle}>
           Hey, I'm Rohan.
@@ -33,7 +33,7 @@ const MyIntro = ({ data }) => {
       <Col
         className={`col ${imgCol}`}
         xs={{ span: 12, order: "first" }}
-        md={{ order: "last" }}
+        md={{ span: true, order: "last" }}
       >
         <GatsbyImage image={image} alt="Rohan Poojary" aria-hidden />
       </Col>
