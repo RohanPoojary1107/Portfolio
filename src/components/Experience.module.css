@@ -14,10 +14,12 @@
 
 .companyName a {
     color: var(--theme-page-text);
+    text-decoration: none;
 }
 
 .companyName a:hover {
     color: var(--theme-page-text);
+    text-decoration: underline;
 }
 
 .jobTitle {
