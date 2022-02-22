@@ -67,21 +67,21 @@ html {
 
 /* Light Mode Toggle Icons for Navbar */
 
-.navbar.Navbar-module--nav--dllyt.navbar.navbar-expand-sm.navbar-light button span {
+.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-light button span {
     background-image: url("../images/close.svg") !important;
 }
 
-.navbar.Navbar-module--nav--dllyt.navbar.navbar-expand-sm.navbar-light .navbar-toggler.collapsed span {
+.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-light .navbar-toggler.collapsed span {
     background-image: url("../images/menu.svg") !important;
 }
 
 /* Dark Mode Toggle Icons for Navbar */
 
-.navbar.Navbar-module--nav--dllyt.navbar.navbar-expand-sm.navbar-dark button span {
+.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-dark button span {
     background-image: url("../images/close-white.svg") !important;
 }
 
-.navbar.Navbar-module--nav--dllyt.navbar.navbar-expand-sm.navbar-dark .navbar-toggler.collapsed span {
+.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-dark .navbar-toggler.collapsed span {
     background-image: url("../images/menu-white.svg") !important;
 }
 
@@ -91,3 +91,8 @@ html {
     }
 }
 
+@media (min-width: 1400px){
+    .container-lg {
+        max-width: 1140px !important;
+    }
+}

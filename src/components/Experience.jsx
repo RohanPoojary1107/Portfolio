@@ -71,7 +71,7 @@ const MyExperience = ({ data }) => {
               className="align-self-center"
               xs={{ span: 12, order: "last" }}
               sm={10}
-              md={{ order: "first" }}
+              md={{ span: true, order: "first" }}
             >
               <div className={companyName}>
                 <a href={job.link}>{job.company}</a>
@@ -88,7 +88,7 @@ const MyExperience = ({ data }) => {
             <Col
               className={`col align-self-center ${companyImgCol}`}
               xs={{ span: 12, order: "first" }}
-              md={{ order: "last" }}
+              md={{ span: true, order: "last" }}
             >
               <GatsbyImage
                 image={image}

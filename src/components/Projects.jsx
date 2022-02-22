@@ -103,7 +103,7 @@ const Projects = () => {
                 <span className="sr-only">Technology stack</span>
                 <div className={cardLang}>
                   {project.techStack.map((tool, index) => (
-                    <Badge pill variant="dark" key={index}>{tool}</Badge>
+                    <Badge pill bg="dark" key={index}>{tool}</Badge>
                   ))}
                 </div>
               </div>
