@@ -16,7 +16,7 @@ const jobList = [
   {
     company: "Wattpad",
     link: "https://www.wattpad.com",
-    jobTitle: "Associate Engineer",
+    title: "Associate Engineer",
     duration: "May 2021 - Present",
     imgName: "wattpad",
     desc: [
@@ -27,7 +27,7 @@ const jobList = [
   {
     company: "ICUBE UTM",
     link: "https://icubeutm.ca/",
-    jobTitle: "Software Developer",
+    title: "Software Developer",
     duration: "Sept 2020 - Feb 2021",
     imgName: "icube",
     desc: [
@@ -39,7 +39,7 @@ const jobList = [
   {
     company: "Royal Bank of Canada",
     link: "https://www.rbcroyalbank.com/personal.html",
-    jobTitle: "Quality Engineer Intern",
+    title: "Quality Engineer Intern",
     duration: "May 2020 - Aug 2020",
     imgName: "rbc",
     desc: [
@@ -54,19 +54,19 @@ const MyExperience = ({ data }) => {
   return (
     <div id="experience">
       <Header sectionName="experience" />
-      {jobList.map((job) => {
+      {jobList.map(({ company, link, title, duration, imgName, desc }) => {
         let image = "";
 
-        if (job.imgName === "wattpad") {
+        if (imgName === "wattpad") {
           image = getImage(data.wattpad.childImageSharp);
-        } else if (job.imgName === "rbc") {
+        } else if (imgName === "rbc") {
           image = getImage(data.rbc.childImageSharp);
         } else {
           image = getImage(data.icube.childImageSharp);
         }
 
         return (
-          <Row className={`row ${row}`} key={job.imgName}>
+          <Row className={`row ${row}`} key={imgName}>
             <Col
               className="align-self-center"
               xs={{ span: 12, order: "last" }}
@@ -74,13 +74,13 @@ const MyExperience = ({ data }) => {
               md={{ span: true, order: "first" }}
             >
               <div className={companyName}>
-                <a href={job.link}>{job.company}</a>
+                <a href={link}>{company}</a>
               </div>
               <div className={jobTitle}>
-                {job.jobTitle} | {job.duration}
+                {title} | {duration}
               </div>
               <ul>
-                {job.desc.map((bullet, index) => (
+                {desc.map((bullet, index) => (
                   <li key={index}>{bullet}</li>
                 ))}
               </ul>
@@ -92,7 +92,7 @@ const MyExperience = ({ data }) => {
             >
               <GatsbyImage
                 image={image}
-                alt={job.imgName}
+                alt={imgName}
                 imgClassName={companyImg}
                 aria-hidden
               />
