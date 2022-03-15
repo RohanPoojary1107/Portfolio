@@ -1,0 +1,64 @@
+.card {
+    border-radius: 16px;
+    box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
+    transition: box-shadow 0.25s ease-in-out 0s;
+    margin-bottom: 1em;
+    transform: none;
+    height: 100%;
+    padding: 2em 1.5em;
+    background-color: var(--elevated-background);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: rgb(9 30 66 / 25%) 0px 8px 16px -4px, rgb(9 30 66 / 31%) 0px 0px 1px;
+    background-color: var(--background-hover);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.cardHeader svg {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+}
+
+.cardContent {
+    font-size: 18px;
+}
+
+.cardTitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.cardDesc {
+    padding-bottom: 16px;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.cardFooter svg {
+    width: 20px;
+    height: 20px;
+}
+
+.cardLang {
+    margin-bottom: 8px;
+}
+
+.cardLang span {
+    margin-right: 8px;
+    margin-top: 8px;
+}
