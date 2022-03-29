@@ -68,21 +68,21 @@ html {
 /* Light Mode Toggle Icons for Navbar */
 
 .navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-light button span {
-    background-image: url("../images/close.svg") !important;
+    background-image: url("../static/images/close.svg") !important;
 }
 
 .navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-light .navbar-toggler.collapsed span {
-    background-image: url("../images/menu.svg") !important;
+    background-image: url("../static/images/menu.svg") !important;
 }
 
 /* Dark Mode Toggle Icons for Navbar */
 
 .navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-dark button span {
-    background-image: url("../images/close-white.svg") !important;
+    background-image: url("../static/images/close-white.svg") !important;
 }
 
 .navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-dark .navbar-toggler.collapsed span {
-    background-image: url("../images/menu-white.svg") !important;
+    background-image: url("../static/images/menu-white.svg") !important;
 }
 
 @media (max-width: 575px) {

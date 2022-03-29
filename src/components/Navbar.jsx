@@ -14,13 +14,13 @@ import {
 } from "./Navbar.module.css";
 import { useTheme } from "../utilities/theme";
 
-import moon from "../images/moon.svg";
-import topStar from "../images/top-star.svg";
-import bottomStar from "../images/bottom-star.svg";
-import sun from "../images/sun.svg";
-import sunRing from "../images/glow.svg";
-import rohanLight from "../images/rohan.png";
-import rohanDark from "../images/rohanWhite.png";
+import moon from "../static/images/moon.svg";
+import topStar from "../static/images/top-star.svg";
+import bottomStar from "../static/images/bottom-star.svg";
+import sun from "../static/images/sun.svg";
+import sunRing from "../static/images/glow.svg";
+import rohanLight from "../static/images/rohan.png";
+import rohanDark from "../static/images/rohanWhite.png";
 
 const NavBar = ({ toggleTheme }) => {
   const theme = useTheme();
@@ -42,7 +42,9 @@ const NavBar = ({ toggleTheme }) => {
 
   return (
     <>
-      <a href="#about" className="skip-link">Skip to content</a>
+      <a href="#about" className="skip-link">
+        Skip to content
+      </a>
       <Navbar
         collapseOnSelect
         expand="sm"
@@ -98,7 +100,9 @@ const NavBar = ({ toggleTheme }) => {
                   src={theme === "light" ? moon : sun}
                   className={modeIcon}
                 />
-                {!lightMode && <img className={sunRings} src={sunRing} alt="" />}
+                {!lightMode && (
+                  <img className={sunRings} src={sunRing} alt="" />
+                )}
                 {lightMode && (
                   <>
                     <img className={starTop} src={topStar} alt="" />

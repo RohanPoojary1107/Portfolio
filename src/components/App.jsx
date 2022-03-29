@@ -48,7 +48,7 @@ const App = ({ data, isInvalid = false }) => {
             <NavBar toggleTheme={toggleTheme} />
             <NotFound />
           </Container>
-        </ThemeContext.Provider >
+        </ThemeContext.Provider>
       ) : (
         <ThemeContext.Provider value={theme}>
           <Seo data={data} />
@@ -61,7 +61,7 @@ const App = ({ data, isInvalid = false }) => {
             <Footer />
             <ScrollToTop />
           </Container>
-        </ThemeContext.Provider >
+        </ThemeContext.Provider>
       )}
     </div>
   );

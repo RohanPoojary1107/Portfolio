@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import icon from "../images/icon.png";
+import icon from "../static/images/icon.png";
 
 const Seo = ({
   data,

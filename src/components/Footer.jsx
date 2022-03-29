@@ -1,7 +1,7 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import react from "../images/react.svg";
+import react from "../static/images/react.svg";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { github, code, twitter, linkedin, mail } from "../icons.js";
 import {
@@ -12,7 +12,7 @@ import {
   madeBy,
   socials,
   mailIcon,
-  linkedIn
+  linkedIn,
 } from "./Footer.module.css";
 
 const Footer = () => {
