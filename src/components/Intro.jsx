@@ -9,9 +9,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { introTitle, shortIntro, row, imgCol } from "./Intro.module.css";
 import { useTheme } from "../utilities/theme";
 
+import { INTRO } from "../data";
+
 const MyIntro = ({ data }) => {
   const image =
-  useTheme() === "light"
+    useTheme() === "light"
       ? getImage(data.rohanColor.childImageSharp)
       : getImage(data.rohanGray.childImageSharp);
 
@@ -23,12 +25,9 @@ const MyIntro = ({ data }) => {
         md={{ span: true, order: "first" }}
       >
         <Typist avgTypingDelay={120} startDelay={500} className={introTitle}>
-          Hey, I'm Rohan.
+          {INTRO.title}
         </Typist>
-        <div className={shortIntro}>
-          I'm passionate about making the web more accessible and I enjoy
-          pushing myself outside my comfort zone.
-        </div>
+        <div className={shortIntro}>{INTRO.subTitle}</div>
       </Col>
       <Col
         className={`col ${imgCol}`}
