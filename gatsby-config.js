@@ -4,7 +4,7 @@ module.exports = {
     description: `Hey, I'm Rohan! I'm passionate about making the web more accessible and I enjoy pushing myself outside my comfort zone.`,
     siteUrl: `https://www.rohanpoojary.com`,
     author: `@Rohan_1107`,
-    image: `https://rohanpoojary.com/img/cover.png`,
+    image: `https://rohanpoojary.com/images/cover.png`,
     keywords: `Rohan Poojary, intern, software engineer, software developer, rohan poojary resume, rohan poojary portfolio, computer science student, student, University of Toronto, Wattpad Intern, RBC intern, University of Toronto - Mississauga`,
   },
   plugins: [
@@ -12,14 +12,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/static/images/`,
         name: 'images'
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/static`,
+        path: `${__dirname}/src/static/pdf/`,
         name: 'pdf'
       }
     },
@@ -38,7 +38,7 @@ module.exports = {
         background_color: `#FFF`,
         theme_color: `#FFF`,
         display: `standalone`,
-        icon: `src/images/icon.png`,
+        icon: `src/static/images/icon.png`,
         icon_options: {
           purpose: `any maskable`,
         }
