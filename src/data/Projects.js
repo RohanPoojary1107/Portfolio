@@ -4,7 +4,7 @@ const PROJECT_LIST = [
     desc: "A simple, user friendly video editor on the Web.",
     techStack: ["React", "Node.js", "Express", "MongoDB"],
     isPrivate: false,
-    link: "https://github.com/RohanPoojary1107/Video-editor",
+    link: "https://github.com/RohanPoojary1107/fire-video-editor",
   },
   {
     name: "Fortnite 2D MMOG",
