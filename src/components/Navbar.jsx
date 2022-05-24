@@ -19,8 +19,8 @@ import topStar from "../static/images/top-star.svg";
 import bottomStar from "../static/images/bottom-star.svg";
 import sun from "../static/images/sun.svg";
 import sunRing from "../static/images/glow.svg";
-import rohanLight from "../static/images/rohan.png";
-import rohanDark from "../static/images/rohanWhite.png";
+import rohanLight from "../static/images/rohan.webp";
+import rohanDark from "../static/images/rohanWhite.webp";
 
 const NavBar = ({ toggleTheme }) => {
   const theme = useTheme();
