@@ -73,7 +73,7 @@ export default function Experience(props) {
     <StaticQuery
       query={graphql`
         query {
-          wattpad: file(relativePath: { eq: "wattpad.png" }) {
+          wattpad: file(relativePath: { eq: "wattpad.webp" }) {
             childImageSharp {
               gatsbyImageData(
                 width: 500
@@ -82,7 +82,7 @@ export default function Experience(props) {
               )
             }
           }
-          rbc: file(relativePath: { eq: "rbc.png" }) {
+          rbc: file(relativePath: { eq: "rbc.webp" }) {
             childImageSharp {
               gatsbyImageData(
                 width: 500
@@ -91,7 +91,7 @@ export default function Experience(props) {
               )
             }
           }
-          icube: file(relativePath: { eq: "icube.png" }) {
+          icube: file(relativePath: { eq: "icube.webp" }) {
             childImageSharp {
               gatsbyImageData(
                 width: 500
