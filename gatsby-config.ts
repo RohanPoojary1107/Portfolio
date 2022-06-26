@@ -1,11 +1,12 @@
-module.exports = {
+import type { GatsbyConfig } from "gatsby";
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: "Rohan Poojary's Portfolio",
-    description: `Hey, I'm Rohan! I'm passionate about making the web more accessible and I enjoy pushing myself outside my comfort zone.`,
-    siteUrl: `https://www.rohanpoojary.com`,
-    author: `@Rohan_1107`,
-    image: `https://rohanpoojary.com/images/cover.png`,
-    keywords: `Rohan Poojary, intern, software engineer, software developer, rohan poojary resume, rohan poojary portfolio, computer science student, student, University of Toronto, Wattpad Intern, RBC intern, University of Toronto - Mississauga`,
+    description: "Hey, I'm Rohan! I'm passionate about making the web more accessible and I enjoy pushing myself outside my comfort zone.",
+    siteUrl: "https://www.rohanpoojary.com",
+    author: "@Rohan_1107",
+    keywords: "Rohan Poojary, intern, software engineer, software developer, rohan poojary resume, rohan poojary portfolio, computer science student, student, University of Toronto, Wattpad Intern, RBC intern, University of Toronto - Mississauga",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -66,5 +67,8 @@ module.exports = {
         enableWebVitalsTracking: true
       },
     },
-],
+  ],
+  graphqlTypegen: true,
 };
+
+export default config;

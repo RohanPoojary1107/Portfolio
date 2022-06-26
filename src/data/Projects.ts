@@ -1,4 +1,12 @@
-const PROJECT_LIST = [
+type Project = {
+  name: string;
+  desc: string;
+  techStack: string[];
+  isPrivate: boolean;
+  link: string;
+};
+
+const PROJECT_LIST: Project[] = [
   {
     name: "Video Editor",
     desc: "A simple, user friendly video editor on the Web.",

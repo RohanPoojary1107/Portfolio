@@ -5,17 +5,30 @@ import "./Typist.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { graphql, StaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { introTitle, shortIntro, row, imgCol } from "./Intro.module.css";
-import { useTheme } from "../utilities/theme";
+import { useTheme, Theme } from "../utilities/theme";
 
 import { INTRO } from "../data";
 
-const MyIntro = ({ data }) => {
+type MyIntroProps = {
+  data: {
+    rohanColor: {
+      childImageSharp: IGatsbyImageData
+    };
+    rohanGray: {
+      childImageSharp: IGatsbyImageData
+    }
+  }
+}
+
+const MyIntro = ({ data }: MyIntroProps) => {
   const image =
-    useTheme() === "light"
+    useTheme() === Theme.LIGHT
       ? getImage(data.rohanColor.childImageSharp)
       : getImage(data.rohanGray.childImageSharp);
+  
+  if (!image) return null;
 
   return (
     <Row className={`row ${row}`}>
@@ -40,7 +53,7 @@ const MyIntro = ({ data }) => {
   );
 };
 
-export default function Intro(props) {
+export default function Intro() {
   return (
     <StaticQuery
       query={graphql`
@@ -65,7 +78,7 @@ export default function Intro(props) {
           }
         }
       `}
-      render={(data) => <MyIntro data={data} {...props} />}
+      render={(data) => <MyIntro data={data} />}
     />
   );
 }

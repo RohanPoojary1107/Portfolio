@@ -1,6 +1,9 @@
 import React from "react";
 
-const Header = ({ sectionName }) => {
+type HeaderProps = {
+  sectionName: string;
+};
+const Header = ({ sectionName }: HeaderProps) => {
   return (
     <div className="section-header">
       <h2 aria-label={sectionName}>{`<${sectionName} />`}</h2>

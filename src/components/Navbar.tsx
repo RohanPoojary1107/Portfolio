@@ -22,7 +22,11 @@ import sunRing from "../static/images/glow.svg";
 import rohanLight from "../static/images/rohan.webp";
 import rohanDark from "../static/images/rohanWhite.webp";
 
-const NavBar = ({ toggleTheme }) => {
+type NavBarProps = {
+  toggleTheme: () => void;
+};
+
+const NavBar = ({ toggleTheme }: NavBarProps) => {
   const theme = useTheme();
   const lightMode = theme === "light";
   const data = useStaticQuery(graphql`
@@ -93,7 +97,7 @@ const NavBar = ({ toggleTheme }) => {
             >
               Resume
             </Nav.Link>
-            <button className={changeMode} onClick={() => toggleTheme()}>
+            <button className={changeMode} onClick={toggleTheme}>
               <div className={imgWrapper}>
                 <img
                   alt={`toggle ${theme === "light" ? "dark" : "light"} mode`}

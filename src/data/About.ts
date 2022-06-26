@@ -1,4 +1,4 @@
-const ABOUT = `My Mantra: “You have to keep working on your craft, specially when
+const ABOUT: string = `My Mantra: “You have to keep working on your craft, specially when
     nobody is watching” <br />
     <br />
     I have been working with Python and Java for two years and am highly
