@@ -1,6 +1,11 @@
 import { createContext, useContext } from "react";
 
-export const ThemeContext = createContext("light");
+export enum Theme {
+  LIGHT = "light",
+  DARK = "dark"
+};
+
+export const ThemeContext = createContext(Theme.LIGHT);
 
 export const useTheme = () => {
   const theme = useContext(ThemeContext);
