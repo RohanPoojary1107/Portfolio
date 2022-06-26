@@ -2,7 +2,7 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { graphql, StaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 import {
   companyImg,
@@ -14,12 +14,26 @@ import {
 import Header from "./SectionHeader";
 import { EXP_LIST } from "../data";
 
-const MyExperience = ({ data }) => {
+type MyExperienceProps = {
+  data: {
+    wattpad: {
+      childImageSharp: IGatsbyImageData
+    },
+    rbc: {
+      childImageSharp: IGatsbyImageData
+    },
+    icube: {
+      childImageSharp: IGatsbyImageData
+    }
+  }
+}
+
+const MyExperience = ({ data }: MyExperienceProps) => {
   return (
     <div id="experience">
       <Header sectionName="experience" />
       {EXP_LIST.map(({ company, link, title, duration, imgName, desc }) => {
-        let image = "";
+        let image: IGatsbyImageData | undefined;
 
         if (imgName === "wattpad") {
           image = getImage(data.wattpad.childImageSharp);
@@ -28,6 +42,8 @@ const MyExperience = ({ data }) => {
         } else {
           image = getImage(data.icube.childImageSharp);
         }
+
+        if(!image) return null;
 
         return (
           <Row className={`row ${row}`} key={imgName}>
@@ -68,7 +84,7 @@ const MyExperience = ({ data }) => {
   );
 };
 
-export default function Experience(props) {
+export default function Experience() {
   return (
     <StaticQuery
       query={graphql`
@@ -102,7 +118,7 @@ export default function Experience(props) {
           }
         }
       `}
-      render={(data) => <MyExperience data={data} {...props} />}
+      render={(data) => <MyExperience data={data} />}
     />
   );
 }

@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { arrowUp } from "../icons.js";
+import { arrowUp } from "../icons";
 import { scroll, scrollBtn } from "./ScrollToTop.module.css";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.pageYOffset > 1000) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+    setIsVisible(window.pageYOffset > 1000);
   };
 
   const scrollToTop = () => {
@@ -18,7 +14,9 @@ export default function ScrollToTop() {
       top: 0,
       behavior: "smooth",
     });
-    document && document.querySelector(".navbar-brand").focus();
+
+    const elem = document?.querySelector(".navbar-brand") as HTMLElement | null;
+    elem?.focus();
   };
 
   useEffect(() => {

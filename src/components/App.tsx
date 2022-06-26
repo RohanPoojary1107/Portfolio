@@ -9,30 +9,34 @@ import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
 import ScrollToTop from "./ScrollToTop";
 import NotFound from "./NotFound";
-import { ThemeContext } from "../utilities/theme";
+import { ThemeContext, Theme } from "../utilities/theme";
 import "./App.css";
 
-const App = ({ data, isInvalid = false }) => {
-  const [theme, setTheme] = useState("light");
+type AppProps = {
+  isInvalid?: boolean
+}
 
-  const setMode = (mode) => {
+const App = ({ isInvalid = false }: AppProps) => {
+  const [theme, setTheme] = useState(Theme.LIGHT);
+
+  const setMode = (mode: Theme) => {
     window.localStorage.setItem("theme", mode);
     setTheme(mode);
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme");
+    const localTheme: Theme = window.localStorage.getItem("theme") as Theme;
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches &&
     !localTheme
-      ? setMode("dark")
+      ? setMode(Theme.DARK)
       : localTheme
       ? setTheme(localTheme)
-      : setMode("light");
+      : setMode(Theme.LIGHT);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
     setMode(newTheme);
   };
 
@@ -51,7 +55,7 @@ const App = ({ data, isInvalid = false }) => {
         </ThemeContext.Provider>
       ) : (
         <ThemeContext.Provider value={theme}>
-          <Seo data={data} />
+          <Seo />
           <Container fluid="lg">
             <NavBar toggleTheme={toggleTheme} />
             <Intro />

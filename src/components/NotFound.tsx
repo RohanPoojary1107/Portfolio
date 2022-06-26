@@ -11,9 +11,12 @@ const NotFound = () => {
       <Col className={`col ${column}`}>
         <h1>Page Not Found!</h1>
         <p>Sorry, but the page you were looking for could not be found.</p>
-        <Button as={Link} to="/">
-          Return Home
-        </Button>
+        {
+          // @ts-ignore
+          <Button as={Link} to="/">
+            Return Home
+          </Button>
+        }
       </Col>
     </Row>
   );
