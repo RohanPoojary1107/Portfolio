@@ -2118,7 +2118,6 @@ type SiteFieldsEnum =
   | 'port'
   | 'siteMetadata.author'
   | 'siteMetadata.description'
-  | 'siteMetadata.image'
   | 'siteMetadata.keywords'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.title'
@@ -2878,7 +2877,6 @@ type SitePluginSortInput = {
 type SiteSiteMetadata = {
   readonly author: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
-  readonly image: Maybe<Scalars['String']>;
   readonly keywords: Maybe<Scalars['String']>;
   readonly siteUrl: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
@@ -2887,7 +2885,6 @@ type SiteSiteMetadata = {
 type SiteSiteMetadataFilterInput = {
   readonly author: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
-  readonly image: InputMaybe<StringQueryOperatorInput>;
   readonly keywords: InputMaybe<StringQueryOperatorInput>;
   readonly siteUrl: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
@@ -2953,7 +2950,7 @@ type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: 
 type SeoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type SeoQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly description: string | null, readonly author: string | null, readonly keywords: string | null, readonly image: string | null } | null } | null };
+type SeoQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly description: string | null, readonly siteUrl: string | null, readonly keywords: string | null } | null } | null };
 
 
 }
