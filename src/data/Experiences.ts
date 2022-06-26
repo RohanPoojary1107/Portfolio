@@ -1,4 +1,13 @@
-const EXP_LIST = [
+type Experience = {
+  company: string,
+  link: string,
+  title: string,
+  duration: string,
+  imgName: string,
+  desc: string[]
+}
+
+const EXP_LIST: Experience[] = [
   {
     company: "Wattpad",
     link: "https://www.wattpad.com",
