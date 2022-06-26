@@ -17,7 +17,7 @@
     "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
-    "@fontsource/inter": "^4.5.7",
+    "@fontsource/inter": "^4.5.11",
     "@types/react-helmet": "^6.1.5",
     "@types/react-typist": "^2.0.3",
     "babel-plugin-remove-graphql-queries": "^4.13.0",
