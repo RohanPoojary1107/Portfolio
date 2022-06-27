@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
 
-import icon from "../static/images/icon.png";
+import icon from "../static/images/icon_512x512.png";
 import cover from "../static/images/cover.png";
 
 type SeoProps = {

@@ -39,10 +39,33 @@ const config: GatsbyConfig = {
         background_color: `#FFF`,
         theme_color: `#FFF`,
         display: `standalone`,
-        icon: `src/static/images/icon.png`,
-        icon_options: {
-          purpose: `any maskable`,
-        }
+        icon: `src/static/images/icon_512x512.png`,
+        icons: [
+          {
+            "src": "src/static/images/icon_192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+          },
+          {
+            "src": "src/static/images/icon_maskable_192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+          },
+          {
+            "src": "src/static/images/icon_512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+          },
+          {
+            "src": "src/static/images/icon_maskable_512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+          },
+        ],
       },
     },
     {
