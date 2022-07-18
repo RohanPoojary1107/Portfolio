@@ -33,7 +33,7 @@
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-robots-txt": "^1.7.1",
     "gatsby-plugin-sharp": "^4.17.0",
-    "gatsby-plugin-sitemap": "^5.17.0",
+    "gatsby-plugin-sitemap": "^5.18.1",
     "gatsby-source-filesystem": "^4.17.0",
     "gatsby-transformer-sharp": "^4.17.0",
     "react": "^18.2.0",
@@ -44,7 +44,7 @@
     "react-typist": "^2.0.5"
   },
   "devDependencies": {
-    "@types/node": "^18.0.1",
+    "@types/node": "^18.0.6",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.6",
     "prettier": "^2.7.1",
