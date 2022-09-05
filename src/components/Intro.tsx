@@ -1,5 +1,4 @@
 import React from "react";
-import Typist from "react-typist";
 import "./Intro.module.css";
 import "./Typist.css";
 import Col from "react-bootstrap/Col";
@@ -37,9 +36,9 @@ const MyIntro = ({ data }: MyIntroProps) => {
         xs={{ span: 12, order: "last" }}
         md={{ span: true, order: "first" }}
       >
-        <Typist avgTypingDelay={120} startDelay={500} className={introTitle}>
+        <div className={introTitle}>
           {INTRO.title}
-        </Typist>
+        </div>
         <div className={shortIntro}>{INTRO.subTitle}</div>
       </Col>
       <Col
