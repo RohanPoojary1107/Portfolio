@@ -1,6 +1,4 @@
 import React from "react";
-import "./Intro.module.css";
-import "./Typist.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { graphql, StaticQuery } from "gatsby";
