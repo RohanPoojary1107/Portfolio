@@ -7,7 +7,8 @@
     "allowJs": true,                                     /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
     "outDir": "public",                                   /* Specify an output folder for all emitted files. */
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "esModuleInterop": true
   },
   "include": ["./src/**/*", "./gatsby-config.ts"],
   "exclude": [
