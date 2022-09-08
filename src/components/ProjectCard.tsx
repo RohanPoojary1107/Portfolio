@@ -8,16 +8,10 @@ import {
   cardHeader,
   cardFooter,
 } from "./ProjectCard.module.css";
-import { github, book, lock } from "../icons";
 import { Badge } from "react-bootstrap";
 
-type ProjectCardProps = {
-  name: string;
-  techStack: string[];
-  desc: string;
-  link: string;
-  isPrivate: boolean;
-};
+import { github, book, lock } from "../icons";
+import { Project } from "../global-types";
 
 const ProjectCard = ({
   name,
@@ -25,7 +19,7 @@ const ProjectCard = ({
   desc,
   link,
   isPrivate,
-}: ProjectCardProps) => {
+}: Project) => {
   return (
     <div className={card}>
       <>

@@ -1,10 +1,4 @@
-type Project = {
-  name: string;
-  desc: string;
-  techStack: string[];
-  isPrivate: boolean;
-  link: string;
-};
+import { Project } from "../global-types";
 
 const PROJECT_LIST: Project[] = [
   {
