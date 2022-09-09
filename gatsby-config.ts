@@ -76,11 +76,14 @@ const config: GatsbyConfig = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "UA-158816449-1",
-        head: true,
-        enableWebVitalsTracking: true
+        trackingIds: [
+          "G-F4FD6SBFP0"
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
       },
     },
   ],
