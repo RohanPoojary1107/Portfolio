@@ -1,6 +1,6 @@
 import React from "react";
 import App from "../components/App";
-import SEO from "../components/SEO";
+import SEO from "../components/Seo";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fontsource/inter";
