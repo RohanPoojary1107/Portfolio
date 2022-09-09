@@ -1,7 +1,7 @@
 type Intro = {
   title: string;
   subTitle: string;
-}
+};
 
 const INTRO: Intro = {
   title: "Hey, I'm Rohan 👋",

@@ -5,23 +5,16 @@ const config: GatsbyConfig = {
     title: "Rohan Poojary's Portfolio",
     description: "Hey, I'm Rohan! I'm passionate about making the web more accessible and I enjoy pushing myself outside my comfort zone.",
     siteUrl: "https://www.rohanpoojary.com",
-    author: "@Rohan_1107",
+    author: "Rohan Poojary",
+    image: "/cover.png",
     keywords: "Rohan Poojary, intern, software engineer, software developer, rohan poojary resume, rohan poojary portfolio, computer science student, student, University of Toronto, Wattpad Intern, RBC intern, University of Toronto - Mississauga",
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/static/images/`,
-        name: 'images'
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/static/pdf/`,
-        name: 'pdf'
+        path: `${__dirname}/src/static/`,
+        name: 'static'
       }
     },
     "gatsby-transformer-sharp",
@@ -39,28 +32,28 @@ const config: GatsbyConfig = {
         background_color: `#FFF`,
         theme_color: `#FFF`,
         display: `standalone`,
-        icon: `src/static/images/icon_512x512.png`,
+        icon: `src/static/icon_512x512.png`,
         icons: [
           {
-            "src": "src/static/images/icon_192x192.png",
+            "src": "src/static/icon_192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"
           },
           {
-            "src": "src/static/images/icon_maskable_192x192.png",
+            "src": "src/static/icon_maskable_192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
           },
           {
-            "src": "src/static/images/icon_512x512.png",
+            "src": "src/static/icon_512x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
           },
           {
-            "src": "src/static/images/icon_maskable_512x512.png",
+            "src": "src/static/icon_maskable_512x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"

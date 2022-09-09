@@ -1,13 +1,13 @@
 import { CompanyCode } from "../global-types";
 
 type Experience = {
-  company: string,
-  link: string,
-  title: string,
-  duration: string,
-  imgName: CompanyCode,
-  desc: string[]
-}
+  company: string;
+  link: string;
+  title: string;
+  duration: string;
+  imgName: CompanyCode;
+  desc: string[];
+};
 
 const EXP_LIST: Experience[] = [
   {
@@ -19,7 +19,7 @@ const EXP_LIST: Experience[] = [
     desc: [
       "Migrated the web application’s Search experience from Backbone.js to React, leading to an 11% increase in user engagement within the first two weeks of launch.",
       "Developed submission forms and contest banners for the 2022 Watty awards while reducing the number of API calls made by 67% and receiving over 30K submissions with zero major bugs on launch.",
-      "Built the foundation elements for Wattpad’s design system in collaboration with internal teams and stakeholders using TypeScript, React, StorybookJS and Webpack."
+      "Built the foundation elements for Wattpad’s design system in collaboration with internal teams and stakeholders using TypeScript, React, StorybookJS and Webpack.",
     ],
   },
   {
@@ -31,7 +31,7 @@ const EXP_LIST: Experience[] = [
     desc: [
       "Worked as an Undergraduate Teaching Assistant for the course CSC309: Programming on the web.",
       "Conducted weekly tutorials to teach JavaScript, React, and Django fundamentals to a class of 10-15 students.",
-      "Provided timely feedback and guidance to 50+ students."
+      "Provided timely feedback and guidance to 50+ students.",
     ],
   },
   {

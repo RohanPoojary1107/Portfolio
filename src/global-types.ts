@@ -2,7 +2,7 @@ export enum CompanyCode {
   RBC = "rbc",
   ICUBE = "icube",
   WATTPAD = "wattpad",
-  UOFT = "uoft"
+  UOFT = "uoft",
 }
 
 export type Project = {

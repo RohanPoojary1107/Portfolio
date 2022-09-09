@@ -11,20 +11,20 @@ import { INTRO } from "../data";
 type MyIntroProps = {
   data: {
     rohanColor: {
-      childImageSharp: IGatsbyImageData
+      childImageSharp: IGatsbyImageData;
     };
     rohanGray: {
-      childImageSharp: IGatsbyImageData
-    }
-  }
-}
+      childImageSharp: IGatsbyImageData;
+    };
+  };
+};
 
 const MyIntro = ({ data }: MyIntroProps) => {
   const image =
     useTheme() === Theme.LIGHT
       ? getImage(data.rohanColor.childImageSharp)
       : getImage(data.rohanGray.childImageSharp);
-  
+
   if (!image) return null;
 
   return (
@@ -34,9 +34,7 @@ const MyIntro = ({ data }: MyIntroProps) => {
         xs={{ span: 12, order: "last" }}
         md={{ span: true, order: "first" }}
       >
-        <div className={introTitle}>
-          {INTRO.title}
-        </div>
+        <div className={introTitle}>{INTRO.title}</div>
         <div className={shortIntro}>{INTRO.subTitle}</div>
       </Col>
       <Col
