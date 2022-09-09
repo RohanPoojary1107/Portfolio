@@ -14,13 +14,13 @@ import {
 } from "./Navbar.module.css";
 import { useTheme } from "../utilities/theme";
 
-import moon from "../static/images/moon.svg";
-import topStar from "../static/images/top-star.svg";
-import bottomStar from "../static/images/bottom-star.svg";
-import sun from "../static/images/sun.svg";
-import sunRing from "../static/images/glow.svg";
-import rohanLight from "../static/images/rohan.webp";
-import rohanDark from "../static/images/rohanWhite.webp";
+import moon from "../static/moon.svg";
+import topStar from "../static/top-star.svg";
+import bottomStar from "../static/bottom-star.svg";
+import sun from "../static/sun.svg";
+import sunRing from "../static/glow.svg";
+import rohanLight from "../static/rohan.webp";
+import rohanDark from "../static/rohanWhite.webp";
 
 type NavBarProps = {
   toggleTheme: () => void;

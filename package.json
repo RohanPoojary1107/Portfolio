@@ -18,8 +18,6 @@
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.11",
-    "@types/react-helmet": "^6.1.5",
-    "@types/react-typist": "^2.0.3",
     "babel-plugin-remove-graphql-queries": "^4.18.0",
     "bootstrap": "^5.2.1",
     "dompurify": "^2.3.8",
@@ -29,7 +27,6 @@
     "gatsby-plugin-image": "^2.19.0",
     "gatsby-plugin-manifest": "^4.17.0",
     "gatsby-plugin-offline": "^5.17.0",
-    "gatsby-plugin-react-helmet": "^5.19.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-robots-txt": "^1.7.1",
     "gatsby-plugin-sharp": "^4.19.0",
@@ -39,7 +36,6 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-transition-group": "^4.4.2"
   },
   "devDependencies": {

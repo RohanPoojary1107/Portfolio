@@ -1,5 +1,6 @@
 import React from "react";
 import App from "../components/App";
+import SEO from "../components/SEO";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fontsource/inter";
@@ -9,4 +10,6 @@ const Home = () => {
 };
 
 export default Home;
+
+export const Head = () => <SEO />
 
