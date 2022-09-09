@@ -13,13 +13,7 @@ import { Badge } from "react-bootstrap";
 import { github, book, lock } from "../icons";
 import { Project } from "../global-types";
 
-const ProjectCard = ({
-  name,
-  techStack,
-  desc,
-  link,
-  isPrivate,
-}: Project) => {
+const ProjectCard = ({ name, techStack, desc, link, isPrivate }: Project) => {
   return (
     <div className={card}>
       <>

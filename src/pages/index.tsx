@@ -11,5 +11,4 @@ const Home = () => {
 
 export default Home;
 
-export const Head = () => <SEO />
-
+export const Head = () => <SEO />;
