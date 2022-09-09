@@ -427,8 +427,6 @@ type File = Node & {
   readonly birthtime: Maybe<Scalars['Date']>;
   /** @deprecated Use `birthTime` instead */
   readonly birthtimeMs: Maybe<Scalars['Float']>;
-  readonly blksize: Maybe<Scalars['Int']>;
-  readonly blocks: Maybe<Scalars['Int']>;
   readonly changeTime: Scalars['Date'];
   /** Returns the first child node of type ImageSharp or null if there are no children of given type on this node */
   readonly childImageSharp: Maybe<ImageSharp>;
@@ -574,8 +572,6 @@ type FileFieldsEnum =
   | 'birthTime'
   | 'birthtime'
   | 'birthtimeMs'
-  | 'blksize'
-  | 'blocks'
   | 'changeTime'
   | 'childImageSharp.children'
   | 'childImageSharp.children.children'
@@ -850,8 +846,6 @@ type FileFilterInput = {
   readonly birthTime: InputMaybe<DateQueryOperatorInput>;
   readonly birthtime: InputMaybe<DateQueryOperatorInput>;
   readonly birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly blksize: InputMaybe<IntQueryOperatorInput>;
-  readonly blocks: InputMaybe<IntQueryOperatorInput>;
   readonly changeTime: InputMaybe<DateQueryOperatorInput>;
   readonly childImageSharp: InputMaybe<ImageSharpFilterInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
@@ -1666,8 +1660,6 @@ type Query_fileArgs = {
   birthTime: InputMaybe<DateQueryOperatorInput>;
   birthtime: InputMaybe<DateQueryOperatorInput>;
   birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  blksize: InputMaybe<IntQueryOperatorInput>;
-  blocks: InputMaybe<IntQueryOperatorInput>;
   changeTime: InputMaybe<DateQueryOperatorInput>;
   childImageSharp: InputMaybe<ImageSharpFilterInput>;
   children: InputMaybe<NodeFilterListInput>;
@@ -2170,7 +2162,6 @@ type SiteFieldsEnum =
   | 'port'
   | 'siteMetadata.author'
   | 'siteMetadata.description'
-  | 'siteMetadata.image'
   | 'siteMetadata.keywords'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.title'
@@ -2964,7 +2955,6 @@ type SitePluginSortInput = {
 type SiteSiteMetadata = {
   readonly author: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
-  readonly image: Maybe<Scalars['String']>;
   readonly keywords: Maybe<Scalars['String']>;
   readonly siteUrl: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
@@ -2973,7 +2963,6 @@ type SiteSiteMetadata = {
 type SiteSiteMetadataFilterInput = {
   readonly author: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
-  readonly image: InputMaybe<StringQueryOperatorInput>;
   readonly keywords: InputMaybe<StringQueryOperatorInput>;
   readonly siteUrl: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
