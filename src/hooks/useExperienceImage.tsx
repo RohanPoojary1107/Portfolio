@@ -12,7 +12,10 @@ type ExperienceImages = {
 export const useExperienceImage = () => {
   const data: ExperienceImages = useStaticQuery(graphql`
     query {
-      wattpad: file(relativePath: { eq: "wattpad.webp" }) {
+      wattpad: file(
+        relativePath: { eq: "wattpad.webp" }
+        sourceInstanceName: { eq: "images" }
+      ) {
         childImageSharp {
           gatsbyImageData(
             width: 500
@@ -21,7 +24,10 @@ export const useExperienceImage = () => {
           )
         }
       }
-      rbc: file(relativePath: { eq: "rbc.webp" }) {
+      rbc: file(
+        relativePath: { eq: "rbc.webp" }
+        sourceInstanceName: { eq: "images" }
+      ) {
         childImageSharp {
           gatsbyImageData(
             width: 500
@@ -30,7 +36,10 @@ export const useExperienceImage = () => {
           )
         }
       }
-      icube: file(relativePath: { eq: "icube.webp" }) {
+      icube: file(
+        relativePath: { eq: "icube.webp" }
+        sourceInstanceName: { eq: "images" }
+      ) {
         childImageSharp {
           gatsbyImageData(
             width: 500
@@ -39,7 +48,10 @@ export const useExperienceImage = () => {
           )
         }
       }
-      uoft: file(relativePath: { eq: "uoft.webp" }) {
+      uoft: file(
+        relativePath: { eq: "uoft.webp" }
+        sourceInstanceName: { eq: "images" }
+      ) {
         childImageSharp {
           gatsbyImageData(
             width: 500
