@@ -17,6 +17,13 @@ const config: GatsbyConfig = {
         name: 'static'
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images/`,
+        name: 'images'
+      }
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-gatsby-cloud",
     `gatsby-plugin-sitemap`,
