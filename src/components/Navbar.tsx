@@ -19,8 +19,8 @@ import topStar from "../static/top-star.svg";
 import bottomStar from "../static/bottom-star.svg";
 import sun from "../static/sun.svg";
 import sunRing from "../static/glow.svg";
-import rohanLight from "../static/rohan.webp";
-import rohanDark from "../static/rohanWhite.webp";
+import rohanLight from "../images/rohan.webp";
+import rohanDark from "../images/rohanWhite.webp";
 
 type NavBarProps = {
   toggleTheme: () => void;
