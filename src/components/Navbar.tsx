@@ -1,26 +1,15 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import {
-  logo,
-  nav,
-  changeMode,
-  modeIcon,
-  imgWrapper,
-  sunRings,
-  starTop,
-  starBottom,
-} from "./Navbar.module.css";
-import { useTheme } from "../utilities/theme";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
-import moon from "../static/moon.svg";
-import topStar from "../static/top-star.svg";
-import bottomStar from "../static/bottom-star.svg";
-import sun from "../static/sun.svg";
-import sunRing from "../static/glow.svg";
+import { useTheme } from "../utilities/theme";
+import ThemeToggleButton from "./ThemeToggleButton";
+
+import { logo, nav } from "./Navbar.module.css";
 import rohanLight from "../images/rohan.webp";
 import rohanDark from "../images/rohanWhite.webp";
+
 
 type NavBarProps = {
   toggleTheme: () => void;
@@ -29,6 +18,7 @@ type NavBarProps = {
 const NavBar = ({ toggleTheme }: NavBarProps) => {
   const theme = useTheme();
   const lightMode = theme === "light";
+
   const data = useStaticQuery(graphql`
     {
       allFile(filter: { extension: { eq: "pdf" } }) {
@@ -97,24 +87,7 @@ const NavBar = ({ toggleTheme }: NavBarProps) => {
             >
               Resume
             </Nav.Link>
-            <button className={changeMode} onClick={toggleTheme}>
-              <div className={imgWrapper}>
-                <img
-                  alt={`toggle ${theme === "light" ? "dark" : "light"} mode`}
-                  src={theme === "light" ? moon : sun}
-                  className={modeIcon}
-                />
-                {!lightMode && (
-                  <img className={sunRings} src={sunRing} alt="" />
-                )}
-                {lightMode && (
-                  <>
-                    <img className={starTop} src={topStar} alt="" />
-                    <img className={starBottom} src={bottomStar} alt="" />
-                  </>
-                )}
-              </div>
-            </button>
+            <ThemeToggleButton onClick={toggleTheme} />
           </Nav>
         </Navbar.Collapse>
       </Navbar>

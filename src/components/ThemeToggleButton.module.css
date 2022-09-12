@@ -1,0 +1,83 @@
+.starTop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-animation: pulse 1s linear infinite;
+    -moz-animation: pulse 1s linear infinite;
+    animation: pulse 1s linear infinite;
+}
+
+.starBottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-animation: pulse 1s linear infinite;
+    -moz-animation: pulse 1s linear infinite;
+    animation: pulse 1s linear infinite;
+}
+
+.changeMode {
+  border: none;
+  background: none;
+}
+
+.modeIcon {
+  width: 30px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.imgWrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+  
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1)};
+  100% { transform: scale(1); }
+}
+  
+.sunRings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+@media (max-width: 575px) {
+  .changeMode {
+    width: fit-content;
+    padding: 0px;
+  }
+}
+
+/* Remove animation for users who prefer reduced motion. */
+@media (prefers-reduced-motion) {
+  .sunRings, .starTop, .starBottom {
+    animation: none;
+    -webkit-animation: none;
+    -moz-animation: none;
+  }
+}
