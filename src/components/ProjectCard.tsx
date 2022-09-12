@@ -30,7 +30,7 @@ const ProjectCard = ({ name, techStack, desc, link, isPrivate }: Project) => {
         </div>
         <div className={cardContent}>
           <div className={cardDesc}>{desc}</div>
-          <span className="sr-only">Technology stack</span>
+          <span className="visually-hidden">Technology stack</span>
           <div className={cardLang}>
             {techStack.map((tool, index) => (
               <Badge pill bg="dark" key={index}>
