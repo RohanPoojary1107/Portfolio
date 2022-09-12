@@ -12,5 +12,9 @@ const NotFound404 = () => {
 export default NotFound404;
 
 export const Head = ({ location }: { location: Location }) => (
-  <SEO title="Rohan Poojary - 404" description="Oops! Page not Found :(" pathname={location.pathname} />
+  <SEO
+    title="Rohan Poojary - 404"
+    description="Oops! Page not Found :("
+    pathname={location.pathname}
+  />
 );
