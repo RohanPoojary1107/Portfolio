@@ -19,7 +19,7 @@
   "dependencies": {
     "@fontsource/inter": "^4.5.14",
     "babel-plugin-remove-graphql-queries": "^4.24.0",
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.2.3",
     "dompurify": "^2.3.8",
     "gatsby": "^4.25.0",
     "gatsby-plugin-gatsby-cloud": "^4.24.1",
