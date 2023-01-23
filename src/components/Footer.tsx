@@ -80,7 +80,9 @@ const Footer = () => {
         </OutboundLink>
       </Col>
       <Col xs={12} sm={6} className={`col ${credits}`}>
-        <div className="visually-hidden">Developed by Rohan Poojary using React</div>
+        <div className="visually-hidden">
+          Developed by Rohan Poojary using React
+        </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="45.004"

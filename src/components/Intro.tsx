@@ -1,7 +1,7 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { introTitle, shortIntro, row, imgCol } from "./Intro.module.css";
 import { useTheme, Theme } from "../utilities/theme";
@@ -9,17 +9,38 @@ import { useTheme, Theme } from "../utilities/theme";
 import { INTRO } from "../data";
 
 type MyIntroProps = {
-  data: {
-    rohanColor: {
-      childImageSharp: IGatsbyImageData;
-    };
-    rohanGray: {
-      childImageSharp: IGatsbyImageData;
-    };
+  rohanColor: {
+    childImageSharp: IGatsbyImageData;
+  };
+  rohanGray: {
+    childImageSharp: IGatsbyImageData;
   };
 };
 
-const MyIntro = ({ data }: MyIntroProps) => {
+const MyIntro = () => {
+  const data: MyIntroProps = useStaticQuery(graphql`
+    query {
+      rohanColor: file(relativePath: { eq: "rohan-color.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 500
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+      rohanGray: file(relativePath: { eq: "rohan-gray.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 500
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
+  `);
+
   const image =
     useTheme() === Theme.LIGHT
       ? getImage(data.rohanColor.childImageSharp)
@@ -48,32 +69,4 @@ const MyIntro = ({ data }: MyIntroProps) => {
   );
 };
 
-export default function Intro() {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          rohanColor: file(relativePath: { eq: "rohan-color.png" }) {
-            childImageSharp {
-              gatsbyImageData(
-                width: 500
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
-          }
-          rohanGray: file(relativePath: { eq: "rohan-gray.png" }) {
-            childImageSharp {
-              gatsbyImageData(
-                width: 500
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
-          }
-        }
-      `}
-      render={(data) => <MyIntro data={data} />}
-    />
-  );
-}
+export default MyIntro;
