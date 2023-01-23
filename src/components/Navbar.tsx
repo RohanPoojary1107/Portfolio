@@ -10,7 +10,6 @@ import { logo, nav } from "./Navbar.module.css";
 import rohanLight from "../images/rohan.webp";
 import rohanDark from "../images/rohanWhite.webp";
 
-
 type NavBarProps = {
   toggleTheme: () => void;
 };
