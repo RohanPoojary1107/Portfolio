@@ -20,7 +20,7 @@
     "@fontsource/inter": "^4.5.15",
     "babel-plugin-remove-graphql-queries": "^5.4.0",
     "bootstrap": "^5.2.3",
-    "dompurify": "^2.4.3",
+    "dompurify": "^3.0.1",
     "gatsby": "^5.4.2",
     "gatsby-plugin-gatsby-cloud": "^5.4.0",
     "gatsby-plugin-google-gtag": "^5.4.0",
