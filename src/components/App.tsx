@@ -10,6 +10,7 @@ import ScrollToTop from "./ScrollToTop";
 import NotFound from "./NotFound";
 import { ThemeContext, Theme } from "../utilities/theme";
 import "./App.css";
+import { Alert } from "react-bootstrap";
 
 type AppProps = {
   isInvalid?: boolean;
@@ -47,6 +48,21 @@ const App = ({ isInvalid = false }: AppProps) => {
           {isInvalid && <NotFound />}
           {!isInvalid && (
             <>
+              <Alert variant="primary">
+                <b className="open-to-work">Open to work starting June 2023!</b>
+                <br />
+                I'm looking for New Grad roles in Software Development. If you
+                or someone in your circle is hiring, please feel free to reach
+                out on{" "}
+                <a
+                  href="https://www.linkedin.com/in/rohanpoojary/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>{" "}
+                🙌
+              </Alert>
               <Intro />
               <About />
               <Experience />
