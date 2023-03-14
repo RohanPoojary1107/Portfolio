@@ -54,6 +54,10 @@ html {
     transform: translateY(0%);
 }
 
+.open-to-work {
+    font-size: 18px;
+}
+
 /* Light Mode Toggle Icons for Navbar */
 
 .navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-light button span {
