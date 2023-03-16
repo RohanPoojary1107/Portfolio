@@ -58,6 +58,7 @@ const App = ({ isInvalid = false }: AppProps) => {
                   href="https://www.linkedin.com/in/rohanpoojary/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="linkedin"
                 >
                   LinkedIn
                 </a>{" "}

@@ -99,6 +99,7 @@ const Footer = () => {
           href="https://reactjs.org/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="React"
         >
           <img src={react} alt="react" className={reactIcon} />
         </OutboundLink>
