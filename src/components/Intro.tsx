@@ -55,7 +55,7 @@ const MyIntro = () => {
         xs={{ span: 12, order: "last" }}
         md={{ span: true, order: "first" }}
       >
-        <div className={introTitle}>{INTRO.title}</div>
+        <h1 className={introTitle}>{INTRO.title}</h1>
         <div className={shortIntro}>{INTRO.subTitle}</div>
       </Col>
       <Col

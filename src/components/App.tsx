@@ -48,7 +48,7 @@ const App = ({ isInvalid = false }: AppProps) => {
           {isInvalid && <NotFound />}
           {!isInvalid && (
             <>
-              <Alert variant="primary">
+              <Alert variant="primary" style={{ color: "#112A46" }}>
                 <b className="open-to-work">Open to work starting June 2023!</b>
                 <br />
                 I'm looking for New Grad roles in Software Development. If you
@@ -58,6 +58,8 @@ const App = ({ isInvalid = false }: AppProps) => {
                   href="https://www.linkedin.com/in/rohanpoojary/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="linkedin"
+                  style={{color: "#112A46"}}
                 >
                   LinkedIn
                 </a>{" "}

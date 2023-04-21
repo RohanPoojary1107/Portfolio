@@ -83,6 +83,7 @@ const NavBar = ({ toggleTheme }: NavBarProps) => {
               rel="noopener noreferrer"
               className="font-weight-medium"
               style={{ color: lightMode ? "black" : "white" }}
+              aria-label="Resume"
             >
               Resume
             </Nav.Link>
