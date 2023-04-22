@@ -12,26 +12,12 @@ import rohanDark from "../images/rohanWhite.webp";
 
 type NavBarProps = {
   toggleTheme: () => void;
+  resume: string;
 };
 
-const NavBar = ({ toggleTheme }: NavBarProps) => {
+const NavBar = ({ toggleTheme, resume }: NavBarProps) => {
   const theme = useTheme();
   const lightMode = theme === "light";
-
-  const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { extension: { eq: "pdf" } }) {
-        edges {
-          node {
-            publicURL
-            name
-          }
-        }
-      }
-    }
-  `);
-
-  const resume = data.allFile.edges[0];
 
   return (
     <>
@@ -78,7 +64,7 @@ const NavBar = ({ toggleTheme }: NavBarProps) => {
               Projects
             </Nav.Link>
             <Nav.Link
-              href={resume.node.publicURL}
+              href={resume}
               target="_blank"
               rel="noopener noreferrer"
               className="font-weight-medium"

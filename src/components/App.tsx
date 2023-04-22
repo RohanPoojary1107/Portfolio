@@ -11,6 +11,7 @@ import NotFound from "./NotFound";
 import { ThemeContext, Theme } from "../utilities/theme";
 import "./App.css";
 import { Alert } from "react-bootstrap";
+import { useStaticQuery, graphql } from "gatsby";
 
 type AppProps = {
   isInvalid?: boolean;
@@ -40,11 +41,26 @@ const App = ({ isInvalid = false }: AppProps) => {
     setMode(newTheme);
   };
 
+  const data = useStaticQuery(graphql`
+    {
+      allFile(filter: { extension: { eq: "pdf" } }) {
+        edges {
+          node {
+            publicURL
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  const resume: string = data.allFile.edges[0].node.publicURL;
+
   return (
     <div className={`app ${theme}`}>
       <ThemeContext.Provider value={theme}>
         <Container fluid="lg">
-          <NavBar toggleTheme={toggleTheme} />
+          <NavBar toggleTheme={toggleTheme} resume={resume} />
           {isInvalid && <NotFound />}
           {!isInvalid && (
             <>
@@ -59,14 +75,14 @@ const App = ({ isInvalid = false }: AppProps) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="linkedin"
-                  style={{color: "#112A46"}}
+                  style={{ color: "#112A46" }}
                 >
                   LinkedIn
                 </a>{" "}
                 🙌
               </Alert>
               <Intro />
-              <About />
+              <About resume={resume} />
               <Experience />
               <Projects />
               <Footer />

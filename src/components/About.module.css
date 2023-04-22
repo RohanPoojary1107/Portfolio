@@ -1,10 +1,13 @@
-.aboutMe {
-    padding-bottom: 60px;
-    margin-bottom: 0;
+.btn {
+    margin-bottom: 60px;
+}
+
+.btn:hover {
+    text-decoration: none;
 }
 
 @media (max-width: 575px) {
-    .aboutMe {
-        padding-bottom: 42px;
+    .btn {
+        margin-bottom: 42px;
     }
 }
