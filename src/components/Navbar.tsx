@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 
 import { useTheme } from "../utilities/theme";
 import ThemeToggleButton from "./ThemeToggleButton";
@@ -12,26 +12,13 @@ import rohanDark from "../images/rohanWhite.webp";
 
 type NavBarProps = {
   toggleTheme: () => void;
+  resume: string;
 };
 
-const NavBar = ({ toggleTheme }: NavBarProps) => {
+const NavBar = ({ toggleTheme, resume }: NavBarProps) => {
   const theme = useTheme();
   const lightMode = theme === "light";
-
-  const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { extension: { eq: "pdf" } }) {
-        edges {
-          node {
-            publicURL
-            name
-          }
-        }
-      }
-    }
-  `);
-
-  const resume = data.allFile.edges[0];
+  const linkStyle = lightMode ? "black" : "white";
 
   return (
     <>
@@ -56,34 +43,22 @@ const NavBar = ({ toggleTheme }: NavBarProps) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link
-              as={Link}
-              to="#about"
-              style={{ color: lightMode ? "black" : "white" }}
-            >
+            <Nav.Link as={Link} to="#about" style={{ color: linkStyle }}>
               About
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="#experience"
-              style={{ color: lightMode ? "black" : "white" }}
-            >
+            <Nav.Link as={Link} to="#experience" style={{ color: linkStyle }}>
               Experience
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="#projects"
-              style={{ color: lightMode ? "black" : "white" }}
-            >
+            <Nav.Link as={Link} to="#projects" style={{ color: linkStyle }}>
               Projects
             </Nav.Link>
             <Nav.Link
-              href={resume.node.publicURL}
+              href={resume}
               target="_blank"
               rel="noopener noreferrer"
               className="font-weight-medium"
-              style={{ color: lightMode ? "black" : "white" }}
               aria-label="Resume"
+              style={{ color: linkStyle }}
             >
               Resume
             </Nav.Link>
