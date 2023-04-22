@@ -1,95 +1,103 @@
 .light {
-    --theme-page-background: #FFF;
-    --theme-page-text: #111;
-    --elevated-background: #FFF;
-    --border-color: lightgray;
+  --theme-page-background: #fff;
+  --theme-page-text: #111;
+  --elevated-background: #fff;
+  --border-color: lightgray;
 }
 
 .dark {
-    --theme-page-background: #181818;
-    --theme-page-text: #FFF;
-    --elevated-background: #212121;
-    --border-color: #383838;
-    --background-hover: #363636;
+  --theme-page-background: #181818;
+  --theme-page-text: #fff;
+  --elevated-background: #212121;
+  --border-color: #383838;
+  --background-hover: #363636;
 }
 
 .app {
-    font-family: "inter";
-    background: var(--theme-page-background);
-    color: var(--theme-page-text);
-    min-height: 100vh;
+  font-family: "inter";
+  background: var(--theme-page-background);
+  color: var(--theme-page-text);
+  min-height: 100vh;
 }
 
 svg path {
-    color: var(--theme-page-text);
-    fill : currentColor;
+  color: var(--theme-page-text);
+  fill: currentColor;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .section-header {
-    display: flex;
-    padding-bottom: 42px;
-    width: 100%;
+  display: flex;
+  padding-bottom: 42px;
+  width: 100%;
 }
 
 .section-header h2 {
-    font-weight: 700;
-    font-size: 46px;
+  font-weight: 700;
+  font-size: 46px;
 }
 
 .skip-link {
-    position:absolute;
-    background: #388bfd;
-    color: white;
-    z-index: 1;
-    padding: 5px;
-    margin-top: 15px;
-    transform: translateY(-200%);
+  position: absolute;
+  background: #388bfd;
+  color: white;
+  z-index: 1;
+  padding: 5px;
+  margin-top: 15px;
+  transform: translateY(-200%);
 }
 
 .skip-link:focus {
-    transform: translateY(0%);
+  transform: translateY(0%);
 }
 
 .open-to-work {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Light Mode Toggle Icons for Navbar */
 
-.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-light button span {
-    background-image: url("../static/close.svg") !important;
+.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-light
+  button
+  span {
+  background-image: url("../static/close.svg") !important;
 }
 
-.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-light .navbar-toggler.collapsed span {
-    background-image: url("../static/menu.svg") !important;
+.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-light
+  .navbar-toggler.collapsed
+  span {
+  background-image: url("../static/menu.svg") !important;
 }
 
 /* Dark Mode Toggle Icons for Navbar */
 
-.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-dark button span {
-    background-image: url("../static/close-white.svg") !important;
+.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-dark
+  button
+  span {
+  background-image: url("../static/close-white.svg") !important;
 }
 
-.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-dark .navbar-toggler.collapsed span {
-    background-image: url("../static/menu-white.svg") !important;
+.navbar.Navbar-module--nav--0bibX.navbar.navbar-expand-sm.navbar-dark
+  .navbar-toggler.collapsed
+  span {
+  background-image: url("../static/menu-white.svg") !important;
 }
 
 @media (max-width: 575px) {
-    .section-header h2 {
-        font-size: 32px;
-    }
+  .section-header h2 {
+    font-size: 32px;
+  }
 }
 
-@media (min-width: 1400px){
-    .container-lg {
-        max-width: 1140px !important;
-    }
+@media (min-width: 1400px) {
+  .container-lg {
+    max-width: 1140px !important;
+  }
 }

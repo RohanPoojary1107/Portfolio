@@ -14,7 +14,16 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.(tsx|ts)": [
+      "prettier --write"
+    ],
+    "src/**/*.css": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
@@ -42,6 +51,8 @@
     "@types/node": "^18.15.13",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.10",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
     "typescript": "^5.0.4",
     "typescript-plugin-css-modules": "^5.0.1"

@@ -1,44 +1,44 @@
 .introTitle {
-    font-size: 50px;
-    font-weight: bold;
+  font-size: 50px;
+  font-weight: bold;
 }
 .shortIntro {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .row {
-    padding: 60px 0px;
+  padding: 60px 0px;
 }
 
 .imgCol {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 838px) {
-    .introTitle {
-        font-size: 42px;
-    }
+  .introTitle {
+    font-size: 42px;
+  }
 }
 
 @media (max-width: 767px) {
-    .imgCol {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 42px;
-    }
+  .imgCol {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 42px;
+  }
 
-    .row {
-        padding: 42px 0px;
-    }
+  .row {
+    padding: 42px 0px;
+  }
 
-    .shortIntro {
-        font-size: 20px;
-    }
+  .shortIntro {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 575px) {
-    .introTitle {
-        font-size: 32px;
-    }
+  .introTitle {
+    font-size: 32px;
+  }
 }

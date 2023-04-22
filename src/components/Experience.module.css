@@ -1,42 +1,42 @@
 .companyImg {
-    border-radius: 15px;
+  border-radius: 15px;
 }
 
 .row {
-    padding-bottom: 120px;
+  padding-bottom: 120px;
 }
 
 .companyName {
-    font-size: 24px;
-    font-weight: bold;
-    padding-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 16px;
 }
 
 .companyName a {
-    color: var(--theme-page-text);
-    text-decoration: none;
+  color: var(--theme-page-text);
+  text-decoration: none;
 }
 
 .companyName a:hover {
-    color: var(--theme-page-text);
+  color: var(--theme-page-text);
 }
 
 .jobTitle {
-    padding-bottom: 16px
+  padding-bottom: 16px;
 }
 
 .companyImgCol {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 767px) {
-    .companyImgCol {
-        justify-content: flex-start;
-        padding-bottom: 42px;
-    }
+  .companyImgCol {
+    justify-content: flex-start;
+    padding-bottom: 42px;
+  }
 
-    .row {
-        padding-bottom: 42px;
-    }
+  .row {
+    padding-bottom: 42px;
+  }
 }
