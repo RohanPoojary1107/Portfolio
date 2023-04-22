@@ -15,8 +15,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
-    "prepare": "husky install",
-    "lint": "npx eslint \"src/**/*.{ts,tsx}\""
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.(tsx|ts)": [
