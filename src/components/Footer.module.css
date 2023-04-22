@@ -1,60 +1,65 @@
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1)};
-    100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .socialIcons {
-    padding-right: 16px;
-    width: 35px;
+  padding-right: 16px;
+  width: 35px;
 }
 
 .socialIcons:hover {
-    animation: pulse 1s 1;
+  animation: pulse 1s 1;
 }
 
 .reactIcon {
-    width: 26px;
+  width: 26px;
 }
 
 .madeBy {
-    padding: 0px 5px;
+  padding: 0px 5px;
 }
 
 .row {
-    padding-bottom: 16px;
-    padding-top: 120px;
+  padding-bottom: 16px;
+  padding-top: 120px;
 }
 
 .credits {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .socials {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .linkedIn {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .mailIcon path {
-    fill: none;
-    stroke: var(--theme-page-text);;
+  fill: none;
+  stroke: var(--theme-page-text);
 }
 
 @media (max-width: 575px) {
-    .credits {
-        justify-content: center;
-        padding-top: 5px;
-    }
+  .credits {
+    justify-content: center;
+    padding-top: 5px;
+  }
 
-    .socials {
-        justify-content: center;
-    }
-
+  .socials {
+    justify-content: center;
+  }
 }

@@ -1,19 +1,19 @@
 .starTop {
-    position: absolute;
-    left: 0;
-    top: 0;
-    -webkit-animation: pulse 1s linear infinite;
-    -moz-animation: pulse 1s linear infinite;
-    animation: pulse 1s linear infinite;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: pulse 1s linear infinite;
+  -moz-animation: pulse 1s linear infinite;
+  animation: pulse 1s linear infinite;
 }
 
 .starBottom {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    -webkit-animation: pulse 1s linear infinite;
-    -moz-animation: pulse 1s linear infinite;
-    animation: pulse 1s linear infinite;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: pulse 1s linear infinite;
+  -moz-animation: pulse 1s linear infinite;
+  animation: pulse 1s linear infinite;
 }
 
 .changeMode {
@@ -50,13 +50,19 @@
     transform: rotate(360deg);
   }
 }
-  
+
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1)};
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-  
+
 .sunRings {
   position: absolute;
   top: 0;
@@ -75,7 +81,9 @@
 
 /* Remove animation for users who prefer reduced motion. */
 @media (prefers-reduced-motion) {
-  .sunRings, .starTop, .starBottom {
+  .sunRings,
+  .starTop,
+  .starBottom {
     animation: none;
     -webkit-animation: none;
     -moz-animation: none;

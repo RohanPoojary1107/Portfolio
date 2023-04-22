@@ -1,26 +1,26 @@
 .scroll {
-    position: fixed;
-    bottom: 3em;
-    right: 1.5em; 
+  position: fixed;
+  bottom: 3em;
+  right: 1.5em;
 }
 
-.scrollBtn { 
-    background: none;
-    border: none;
+.scrollBtn {
+  background: none;
+  border: none;
 }
 
-.scroll .scrollBtn svg { 
-    width: 30px;
+.scroll .scrollBtn svg {
+  width: 30px;
 }
 
 @media (max-width: 576px) {
-    .scroll {
-        display: none;
-    }
+  .scroll {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
-    .scroll {
-        right: 15px;
-    }
+  .scroll {
+    right: 15px;
+  }
 }
