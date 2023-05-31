@@ -28,7 +28,7 @@
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
     "babel-plugin-remove-graphql-queries": "^5.10.0",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.0",
     "dompurify": "^3.0.3",
     "gatsby": "^5.10.0",
     "gatsby-plugin-gatsby-cloud": "^5.10.0",
