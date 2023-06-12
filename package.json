@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.2.0",
-    "@types/react": "^18.2.6",
+    "@types/react": "^18.2.11",
     "@types/react-dom": "^18.2.4",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
