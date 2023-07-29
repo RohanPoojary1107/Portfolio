@@ -29,8 +29,10 @@ const ThemeToggleButton = () => {
     <button className={changeMode} onClick={toggleTheme}>
       <div className={imgWrapper}>
         <img
-          alt={`toggle ${theme === "light" ? "dark" : "light"} mode`}
-          src={theme === "light" ? moon : sun}
+          alt={`toggle ${
+            theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
+          } mode`}
+          src={theme === Theme.LIGHT ? moon : sun}
           className={modeIcon}
         />
         {!lightMode && <img className={sunRings} src={sunRing} alt="" />}
