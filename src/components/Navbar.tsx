@@ -16,6 +16,7 @@ type NavBarProps = {
 
 const NavBar = ({ resume }: NavBarProps) => {
   const [theme] = useTheme();
+
   const lightMode = theme === Theme.LIGHT;
   const linkStyle = lightMode ? "black" : "white";
 
