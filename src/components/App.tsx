@@ -8,7 +8,12 @@ import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
 import ScrollToTop from "./ScrollToTop";
 import NotFound from "./NotFound";
-import { ThemeContext, Theme } from "../utilities/theme";
+import {
+  ThemeContext,
+  Theme,
+  getThemeLocalStorage,
+  setThemeLocalStorage,
+} from "../utilities/theme";
 import "./App.css";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -20,12 +25,12 @@ const App = ({ isInvalid = false }: AppProps) => {
   const [theme, setTheme] = useState(Theme.LIGHT);
 
   const setMode = (mode: Theme) => {
-    window.localStorage.setItem("theme", mode);
     setTheme(mode);
+    setThemeLocalStorage(mode);
   };
 
   useEffect(() => {
-    const localTheme: Theme = window.localStorage.getItem("theme") as Theme;
+    const localTheme = getThemeLocalStorage();
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches &&
     !localTheme

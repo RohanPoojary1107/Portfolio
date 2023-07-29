@@ -1,5 +1,5 @@
 import React from "react";
-import { Theme, useTheme } from "../utilities/theme";
+import { Theme, setThemeLocalStorage, useTheme } from "../utilities/theme";
 import {
   changeMode,
   modeIcon,
@@ -20,9 +20,9 @@ const ThemeToggleButton = () => {
   const lightMode = theme === Theme.LIGHT;
 
   const toggleTheme = () => {
-    setTheme((prevTheme) =>
-      prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
-    );
+    const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
+    setTheme(newTheme);
+    setThemeLocalStorage(newTheme);
   };
 
   return (

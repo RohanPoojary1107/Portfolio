@@ -18,4 +18,18 @@ const useTheme = () => {
   return theme;
 };
 
-export { useTheme, ThemeContext, Theme };
+const setThemeLocalStorage = (theme: Theme) => {
+  window.localStorage.setItem("theme", theme);
+};
+
+const getThemeLocalStorage = () => {
+  return window.localStorage.getItem("theme") as Theme;
+};
+
+export {
+  useTheme,
+  ThemeContext,
+  Theme,
+  setThemeLocalStorage,
+  getThemeLocalStorage,
+};
