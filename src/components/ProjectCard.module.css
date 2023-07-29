@@ -1,6 +1,8 @@
 .card {
   border-radius: 16px;
-  box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
+  box-shadow:
+    rgb(9 30 66 / 25%) 0px 1px 1px,
+    rgb(9 30 66 / 13%) 0px 0px 1px 1px;
   transition: box-shadow 0.25s ease-in-out 0s;
   margin-bottom: 1em;
   transform: none;
@@ -13,7 +15,8 @@
 }
 
 .card:hover {
-  box-shadow: rgb(9 30 66 / 25%) 0px 8px 16px -4px,
+  box-shadow:
+    rgb(9 30 66 / 25%) 0px 8px 16px -4px,
     rgb(9 30 66 / 31%) 0px 0px 1px;
   background-color: var(--background-hover);
 }
