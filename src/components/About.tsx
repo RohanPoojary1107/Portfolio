@@ -9,7 +9,8 @@ import { ABOUT } from "../data";
 import { Theme, useTheme } from "../utilities/theme";
 
 const About = ({ resume }: { resume: string }) => {
-  const btnVariant = useTheme() === Theme.LIGHT ? "dark" : "light";
+  const [theme] = useTheme();
+  const btnVariant = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
 
   return (
     <Row id="about">
