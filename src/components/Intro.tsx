@@ -1,7 +1,7 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { graphql, StaticQuery, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { introTitle, shortIntro, row, imgCol } from "./Intro.module.css";
 import { useTheme, Theme } from "../utilities/theme";
@@ -40,9 +40,10 @@ const MyIntro = () => {
       }
     }
   `);
+  const [theme] = useTheme();
 
   const image =
-    useTheme() === Theme.LIGHT
+    theme === Theme.LIGHT
       ? getImage(data.rohanColor.childImageSharp)
       : getImage(data.rohanGray.childImageSharp);
 
