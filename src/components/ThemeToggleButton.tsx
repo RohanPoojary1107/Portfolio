@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "../utilities/theme";
+import { Theme, useTheme } from "../utilities/theme";
 import {
   changeMode,
   modeIcon,
@@ -15,16 +15,18 @@ import bottomStar from "../static/bottom-star.svg";
 import sun from "../static/sun.svg";
 import sunRing from "../static/glow.svg";
 
-type ThemeToggleButtonProps = {
-  onClick: () => void;
-};
+const ThemeToggleButton = () => {
+  const [theme, setTheme] = useTheme();
+  const lightMode = theme === Theme.LIGHT;
 
-const ThemeToggleButton = ({ onClick }: ThemeToggleButtonProps) => {
-  const theme = useTheme();
-  const lightMode = theme === "light";
+  const toggleTheme = () => {
+    setTheme((prevTheme) =>
+      prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
+    );
+  };
 
   return (
-    <button className={changeMode} onClick={onClick}>
+    <button className={changeMode} onClick={toggleTheme}>
       <div className={imgWrapper}>
         <img
           alt={`toggle ${theme === "light" ? "dark" : "light"} mode`}

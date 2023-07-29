@@ -35,11 +35,6 @@ const App = ({ isInvalid = false }: AppProps) => {
       : setMode(Theme.LIGHT);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
-    setMode(newTheme);
-  };
-
   const data = useStaticQuery(graphql`
     {
       allFile(filter: { extension: { eq: "pdf" } }) {
@@ -57,9 +52,9 @@ const App = ({ isInvalid = false }: AppProps) => {
 
   return (
     <div className={`app ${theme}`}>
-      <ThemeContext.Provider value={theme}>
+      <ThemeContext.Provider value={[theme, setTheme]}>
         <Container fluid="lg">
-          <NavBar toggleTheme={toggleTheme} resume={resume} />
+          <NavBar resume={resume} />
           {isInvalid && <NotFound />}
           {!isInvalid && (
             <>

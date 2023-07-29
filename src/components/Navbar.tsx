@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "gatsby";
 
-import { useTheme } from "../utilities/theme";
+import { Theme, useTheme } from "../utilities/theme";
 import ThemeToggleButton from "./ThemeToggleButton";
 
 import { logo, nav } from "./Navbar.module.css";
@@ -11,13 +11,12 @@ import rohanLight from "../images/rohan.webp";
 import rohanDark from "../images/rohanWhite.webp";
 
 type NavBarProps = {
-  toggleTheme: () => void;
   resume: string;
 };
 
-const NavBar = ({ toggleTheme, resume }: NavBarProps) => {
-  const theme = useTheme();
-  const lightMode = theme === "light";
+const NavBar = ({ resume }: NavBarProps) => {
+  const [theme] = useTheme();
+  const lightMode = theme === Theme.LIGHT;
   const linkStyle = lightMode ? "black" : "white";
 
   return (
@@ -62,7 +61,7 @@ const NavBar = ({ toggleTheme, resume }: NavBarProps) => {
             >
               Resume
             </Nav.Link>
-            <ThemeToggleButton onClick={toggleTheme} />
+            <ThemeToggleButton />
           </Nav>
         </Navbar.Collapse>
       </Navbar>

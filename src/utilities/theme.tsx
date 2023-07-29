@@ -1,13 +1,14 @@
-import { createContext, useContext } from "react";
+import { Dispatch, SetStateAction, createContext, useContext } from "react";
 
-export enum Theme {
+enum Theme {
   LIGHT = "light",
   DARK = "dark",
 }
+type ThemeContextType = [Theme | null, Dispatch<SetStateAction<Theme | null>>];
 
-export const ThemeContext = createContext(Theme.LIGHT);
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const useTheme = () => {
+const useTheme = () => {
   const theme = useContext(ThemeContext);
 
   if (!theme) {
@@ -16,3 +17,5 @@ export const useTheme = () => {
 
   return theme;
 };
+
+export { useTheme, ThemeContext, Theme };
